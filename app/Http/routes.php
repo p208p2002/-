@@ -15,6 +15,25 @@ Route::get('/', function () {
     return view('index');
 });
 
+//後台
+Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
+    Route::get('/', function () {
+        return view('admin/index');
+    });
+    //最新消息
+    Route::get('/newNews','newNewsController@create');
+    Route::post('/newNews','newNewsController@store');
+
+    // Route::get('/newNewsController', function () {
+    //     return "it is get";
+    // });
+
+    //
+});
+
+
+
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
