@@ -7,7 +7,7 @@
 <div class="form-group">
     <div class="row">
         <div class="col-3">
-            <label for="exampleInputEmail1">分類</label>
+            <label for="exampleInputEmail1">對象</label>
             <select class="form-control" name="classId">
                 {{--  @foreach ($datas as $data)
                 <option value={{ $data->id }}>{{ $data->className }}</option>
@@ -29,7 +29,7 @@
 		</script>
 </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">建立作業</button>
 </form>
 @endsection
 

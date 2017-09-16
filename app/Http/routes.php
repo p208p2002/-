@@ -14,8 +14,14 @@
 Route::get('/', function () {
     return view('index');
 });
+//使用者後台
+Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
+    Route::get('/', function () {
+        return "ok";
+    });
+});
 
-//後台
+//管理者後台
 Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/', function () {
         return view('admin/index');
