@@ -1,7 +1,7 @@
 @extends('admin.layouts.main')
 <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
 @section('main')
-<h3>最新消息</h3>
+<h3>課堂作業</h3>
 <form action={{ url('webAdmin/newNews') }} method="POST">
 {{ csrf_field() }}
 <div class="form-group">
@@ -9,9 +9,9 @@
         <div class="col-3">
             <label for="exampleInputEmail1">分類</label>
             <select class="form-control" name="classId">
-                @foreach ($datas as $data)
+                {{--  @foreach ($datas as $data)
                 <option value={{ $data->id }}>{{ $data->className }}</option>
-                @endforeach
+                @endforeach  --}}
             </select>
         </div>
         <div class="col">

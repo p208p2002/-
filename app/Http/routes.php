@@ -24,6 +24,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/newNews','Admin\newNewsController@create');
     Route::post('/newNews','Admin\newNewsController@store');
 
+    //課堂作業
+    Route::get('/homework','Admin\homeworkController@create');
+
 });
 
 
