@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
     Route::get('/', function () {

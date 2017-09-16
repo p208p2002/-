@@ -6,7 +6,7 @@ use Closure;
 use Auth;
 use DB;
 
-class IsAdmin
+class IsMember
 {
     /**
      * Handle an incoming request.
@@ -18,7 +18,7 @@ class IsAdmin
     public function handle($request, Closure $next)
     {
         if (Auth::check()) 
-            if(Auth::user()->userLevel==5) //確認是網站管理員
+            if(Auth::user()->userLevel==0) //一般使用者
                 return $next($request);
         
         return redirect('./login');
