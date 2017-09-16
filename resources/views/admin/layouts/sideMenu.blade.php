@@ -1,5 +1,5 @@
 <h3><a href={{ url('/webAdmin') }} >後台首頁</a></h3><br>
-<h3>發佈操作</h3>
+<h3>一般操作</h3>
 <ul class="list-group">
     <li class="list-group-item"><a href={{ url('/webAdmin/newNews') }}> 最新消息 </a></li>
     <li class="list-group-item">好文閱讀</li>
