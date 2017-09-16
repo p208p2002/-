@@ -11,6 +11,7 @@
 <h3>後台操作</h3>
 <ul class="list-group">
     <li class="list-group-item">管理分類</li>
+    <li class="list-group-item">作業批改</li>
 </ul><br>
 
 <h3>其他操作</h3>

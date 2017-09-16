@@ -28,11 +28,13 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
         return view('admin/index');
     });
     //最新消息
-    Route::get('/newNews','Admin\newNewsController@create');
+    Route::get('/newNews','Admin\newNewsController@index');
+    Route::get('/newNews/create','Admin\newNewsController@create');
     Route::post('/newNews','Admin\newNewsController@store');
 
     //課堂作業
-    Route::get('/homework','Admin\homeworkController@create');
+    Route::get('/homework','Admin\homeworkController@index');
+    Route::get('/homework/create','Admin\homeworkController@create');
 
 });
 

@@ -17,6 +17,7 @@ class homeworkController extends Controller
     public function index()
     {
         //
+        return view('admin/homeworkIndex');
     }
 
     /**

@@ -18,7 +18,7 @@ class newNewsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin/newNewsIndex');
     }
 
     /**
