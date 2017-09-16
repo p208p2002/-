@@ -21,14 +21,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
         return view('admin/index');
     });
     //最新消息
-    Route::get('/newNews','newNewsController@create');
-    Route::post('/newNews','newNewsController@store');
+    Route::get('/newNews','Admin\newNewsController@create');
+    Route::post('/newNews','Admin\newNewsController@store');
 
-    // Route::get('/newNewsController', function () {
-    //     return "it is get";
-    // });
-
-    //
 });
 
 

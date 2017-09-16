@@ -8,9 +8,10 @@
     <div class="row">
         <div class="col-3">
             <label for="exampleInputEmail1">分類</label>
-            <select class="form-control">
-                <option>分類1</option>
-                <option>分類2</option>
+            <select class="form-control" name="classId">
+                @foreach ($datas as $data)
+                <option value={{ $data->id }}>{{ $data->className }}</option>
+                @endforeach
             </select>
         </div>
         <div class="col">
@@ -22,7 +23,7 @@
 
 <div class="form-group">
   <label for="comment">內文</label>
-  <textarea class="form-control" rows="8" id="comment"></textarea>
+  <textarea name="context" class="form-control" rows="8" id="comment"></textarea>
 </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>

@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use DB;
+use Auth;
 
 class newNewsController extends Controller
 {
@@ -25,7 +28,8 @@ class newNewsController extends Controller
      */
     public function create()
     {
-        return view('admin/newNews');
+        $datas=DB::table('newNewsClass')->get();
+        return view('admin/newNews',['datas'=>$datas]);
     }
 
     /**
@@ -36,8 +40,19 @@ class newNewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request->input('title'));
+        try{
+            DB::table('newnewsarticle')->insert(
+                ['classid' => $request->input('classId'),
+                'createrid' => Auth::user()->id,
+                'title' => $request->input('title') ,
+                'context' => $request->input('context'),
+                ]
+            );
+        }
+        catch (\Exception $e){
+            return "標題或內文<b>不可為空</b>，返回<a href=".url('webAdmin/newNews').">上一頁</a>從新操作";
+        }
+        return redirect('webAdmin/newNews');
     }
 
     /**
@@ -85,3 +100,4 @@ class newNewsController extends Controller
         //
     }
 }
+
