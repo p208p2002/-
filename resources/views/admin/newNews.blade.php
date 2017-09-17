@@ -1,5 +1,11 @@
 @extends('admin.layouts.main')
 <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#block1-menuItem1").addClass("active");    
+    });
+</script>
 @section('main')
 <h3>最新消息</h3>
 <form action={{ url('webAdmin/newNews') }} method="POST">
