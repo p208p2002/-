@@ -18,15 +18,33 @@
 </div>
 <br>
 
-<!--  -->
-<button type="button" class="btn btn-danger">執行</button>
-<button type="button" class="btn btn-warning">全選</button>
-<button type="button" class="btn btn-info">全不選</button><br><br>
+{{--    --}}
+<nav aria-label="...">
+  <ul class="pagination pagination">
+    <li class="page-item">
+      <a class="page-link" href= {{url('/webAdmin/newNews/delete/0')}} tabindex="-1">First page</a>
+    </li>
 
+    @for($i=0;$i<5;$i++)
+    <li class="page-item"><a class="page-link" href={{ url('/webAdmin/newNews/delete').'/'.($page+$i) }} >{{ $page+$i+1 }}</a></li>
+    @endfor
+
+  </ul>
+</nav>
+
+
+<!--  -->
+<form action={{ url('webAdmin/newNews/delete') }} method="POST">
+{{ csrf_field() }}
+<button type="submit" class="btn btn-danger">執行</button>
+<button type="button" class="btn btn-warning" onclick="selectAll()">全選</button>
+<button type="button" class="btn btn-info" onclick="unselectAll()">全不選</button><br><br>
+
+{{--    --}}
 @foreach($datas as $data)
 <div class="input-group">
     <span class="input-group-addon">
-    <input value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
+    <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
     </span>
     <?php $className = DB::table('newnewsclass')->where('id', $data->classid )->first(); ?>
     <label  class="form-control col-2">{{ $className->className }}</label>
@@ -35,5 +53,23 @@
     <button type="button" class="btn btn-light">查看</button>
 </div><br>
 @endforeach
+</form>
+
+
+
+
+<script>
+function selectAll(){
+    $(':checkbox').each(function() {
+        this.checked = true;                        
+    });
+}
+
+function unselectAll(){
+    $(':checkbox').each(function() {
+        this.checked = false;
+    });
+}
+</script>
 
 @endsection

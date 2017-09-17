@@ -95,11 +95,27 @@ class newNewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-       
+        try{   
+            foreach($request->ids as $id){
+                DB::table('newnewsarticle')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return redirect('webAdmin/newNews/delete/0');
     }
 
-    
+    public function destroyPage(Request $request,$page)
+    {       
+        $datas=DB::table('newnewsarticle')
+        ->skip($page*10)
+        ->take(10)
+        ->orderBy('id', 'desc')
+        ->get();
+        return view('admin/newNewsDeleteList',['datas'=>$datas,'page'=>$page]);
+    }    
 }
 

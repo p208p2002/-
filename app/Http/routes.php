@@ -31,10 +31,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/newNews','Admin\newNewsController@index');
     Route::get('/newNews/create','Admin\newNewsController@create');
     Route::post('/newNews','Admin\newNewsController@store');
-    Route::get('/newNews/delete',function(){
-        $datas=DB::table('newnewsarticle')->get();
-        return view('admin/newNewsDeleteList',['datas'=>$datas]);
-    });
+    Route::get('/newNews/delete/{page}','Admin\newNewsController@destroyPage');
+    Route::post('/newNews/delete','Admin\newNewsController@destroy');
 
     //課堂作業
     Route::get('/homework','Admin\homeworkController@index');

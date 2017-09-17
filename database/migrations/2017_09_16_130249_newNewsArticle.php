@@ -17,7 +17,7 @@ class NewNewsArticle extends Migration
             $table->increments('id');
             $table->integer('classid');
             $table->integer('createrid');
-            $table->string('title')->unique();
+            $table->string('title');
             $table->string('context');
             $table->timestamp('createtime');
         });
