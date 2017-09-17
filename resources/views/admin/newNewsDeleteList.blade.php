@@ -21,7 +21,7 @@
 {{--    --}}
 <nav aria-label="...">
   <ul class="pagination pagination">
-    <li class="page-item">
+    <li class="page-item active">
       <a class="page-link" href= {{url('/webAdmin/newNews/delete/0')}} tabindex="-1">First page</a>
     </li>
 
