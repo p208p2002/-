@@ -97,7 +97,9 @@ class newNewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+       
     }
+
+    
 }
 

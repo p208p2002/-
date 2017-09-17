@@ -10,5 +10,5 @@
 <small id="passwordHelpInline" class="text-muted">請選擇功能</small><br><br>
 <a class="btn btn-primary" href={{ url('webAdmin/newNews/create') }} role="button">發佈消息</a>
 <a class="btn btn-warning" href="#" role="button">編輯消息</a>
-<a class="btn btn-danger" href="#" role="button">刪除消息</a>
+<a class="btn btn-danger" href={{ url('webAdmin/newNews/delete') }} role="button">刪除消息</a>
 @endsection
