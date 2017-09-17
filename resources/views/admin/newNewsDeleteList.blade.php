@@ -26,7 +26,7 @@
     </li>
 
     @for($i=0;$i<5;$i++)
-    <li class="page-item"><a class="page-link" href={{ url('/webAdmin/newNews/delete').'/'.($page+$i) }} >{{ $page+$i+1 }}</a></li>
+    <li class="page-item"><a class="page-link" href={{ url('/webAdmin/newNews/delete').'/'.($page+$i+1) }} >{{ $page+$i+2}}</a></li>
     @endfor
 
   </ul>
