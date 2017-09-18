@@ -1,5 +1,10 @@
 @extends('admin.layouts.main')
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#block1-menuItem1").addClass("active");    
+    });
+</script>
 @section('main')
 <h3>管理分類</h3>
 <small class="text-muted">自訂文章分類</small><br><br>
