@@ -117,5 +117,11 @@ class newNewsController extends Controller
         ->get();
         return view('admin/newNewsDeleteList',['datas'=>$datas,'page'=>$page]);
     }    
+
+    public function classManager()
+    {
+        $datas=DB::table('newnewsclass')->get();
+        return view('admin/managerFilter',['datas'=>$datas]);
+    }
 }
 

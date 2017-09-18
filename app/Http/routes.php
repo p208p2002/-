@@ -33,10 +33,13 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::post('/newNews','Admin\newNewsController@store');
     Route::get('/newNews/delete/{page}','Admin\newNewsController@destroyPage');
     Route::post('/newNews/delete','Admin\newNewsController@destroy');
+    Route::get('/newNews/managerFilter','Admin\newNewsController@classManager');
 
     //課堂作業
     Route::get('/homework','Admin\homeworkController@index');
     Route::get('/homework/create','Admin\homeworkController@create');
+
+    
 
 });
 

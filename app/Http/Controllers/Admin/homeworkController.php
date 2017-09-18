@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class homeworkController extends Controller
 {
@@ -16,7 +17,7 @@ class homeworkController extends Controller
      */
     public function index()
     {
-        //
+        
         return view('admin/homeworkIndex');
     }
 
@@ -28,7 +29,8 @@ class homeworkController extends Controller
     public function create()
     {
         //
-        return view('admin/homework');
+        $datas=DB::table('homeworkclass')->get();
+        return view('admin/homework',['datas'=>$datas]);
     }
 
     /**

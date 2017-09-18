@@ -8,16 +8,16 @@
 </script>
 @section('main')
 <h3>課堂作業</h3>
-<form action={{ url('webAdmin/newNews') }} method="POST">
+<form action={{ url('webAdmin/homework') }} method="POST">
 {{ csrf_field() }}
 <div class="form-group">
     <div class="row">
         <div class="col-3">
             <label for="exampleInputEmail1">對象</label>
             <select class="form-control" name="classId">
-                {{--  @foreach ($datas as $data)
+                @foreach ($datas as $data)
                 <option value={{ $data->id }}>{{ $data->className }}</option>
-                @endforeach  --}}
+                @endforeach
             </select>
         </div>
         <div class="col">
