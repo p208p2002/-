@@ -123,5 +123,19 @@ class newNewsController extends Controller
         $datas=DB::table('newnewsclass')->get();
         return view('admin/managerFilter',['datas'=>$datas]);
     }
+
+    public function classManagerDel($id)
+    {
+        DB::table('newnewsclass')->where('id',$id)->delete();
+        return redirect('webAdmin/newNews/managerFilter');
+    }
+
+    public function classManagerAdd(Request $request)
+    {
+        DB::table('newnewsclass')->insert(
+            ['className' => $request->input('className')]
+        );
+        return redirect('webAdmin/newNews/managerFilter');
+    }
 }
 

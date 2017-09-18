@@ -23,15 +23,18 @@
                 @foreach($datas as $data)
                     <tr>
                     <td>{{ $data->className }}</td>
-                    <td><button type="button" class="btn btn-danger">－</button></td>
+                    <td><a class="btn btn-danger" href={{ url('./webAdmin/newNews/managerFilter/del')."/".$data->id }} role="button-danger">－</a></td>
                     </tr>
                 @endforeach
                 
                 {{--  add  --}}
+                <form action={{ url('./webAdmin/newNews/managerFilter/add')}} method="POST">
+                {{ csrf_field() }}
                 <tr>
-                    <td><input type="text" class="form-control" placeholder="新增分類..."></td>
-                    <td><button type="button" class="btn btn-success">＋</button></td>
+                    <td><input type="text" name="className" class="form-control" placeholder="新增分類..."></td>
+                    <td><button type="submit" class="btn btn-success">＋</button></td>
                 </tr>
+                </from>
 
             </tbody>
         </table>   
