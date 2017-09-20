@@ -40,14 +40,23 @@
 <button type="button" class="btn btn-warning" onclick="selectAll()">全選</button>
 <button type="button" class="btn btn-info" onclick="unselectAll()">全不選</button><br><br>
 
-{{--    --}}
+
 @foreach($datas as $data)
 <div class="input-group">
     <span class="input-group-addon">
     <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
     </span>
     <?php $className = DB::table('newnewsclass')->where('id', $data->classid )->first(); ?>
-    <label  class="form-control col-2">{{ $className->className }}</label>
+    <label  class="form-control col-2">
+    <?php 
+    try{
+        echo $className->className;
+    }
+    catch (\Exception $e){
+        echo "其他";
+    }
+    ?>
+    </label>
     <label  class="form-control">{{ $data->title }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>
     <button type="button" class="btn btn-light">查看</button>

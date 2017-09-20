@@ -10,7 +10,7 @@
 
 <h3>後台操作</h3>
 <div class="list-group">
-  <a id="block1-menuItem1" href={{ url('/webAdmin/managerFilter') }} class="list-group-item list-group-item-action">管理分類</a>
+  <a id="block1-menuItem1" href={{ url('/webAdmin/myCourse') }} class="list-group-item list-group-item-action">我的開課</a>
 </div><br>
 
 <h3>其他操作</h3>

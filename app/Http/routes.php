@@ -44,6 +44,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/homework','Admin\homeworkController@index');
     Route::get('/homework/create','Admin\homeworkController@create');
 
+    //我的開課
+    Route::get('/myCourse','Admin\myCourseController@index');
+
     
 
 });
