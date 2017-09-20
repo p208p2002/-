@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class NewNewsClass extends Migration
+class MyCourse extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,14 @@ class NewNewsClass extends Migration
      */
     public function up()
     {
-        Schema::create('newNewsclass', function (Blueprint $table) {
+        //
+        Schema::create('mycourse', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('className');
+            $table->string('course_year');
+            $table->string('course_term');
+            $table->string('course_name');
+            $table->string('course_context');
+            $table->string('teacher_name');
         });
     }
 
@@ -26,6 +31,6 @@ class NewNewsClass extends Migration
     public function down()
     {
         //
-
+        //Schema::drop('mycourse');
     }
 }

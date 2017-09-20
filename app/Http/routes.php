@@ -34,6 +34,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/newNews/delete/{page}','Admin\newNewsController@destroyPage');
     Route::post('/newNews/delete','Admin\newNewsController@destroy');
 
+    //
     Route::get('/newNews/managerFilter','Admin\newNewsController@classManager');
     Route::get('/newNews/managerFilter/del/{id}','Admin\newNewsController@classManagerDel');
     Route::post('/newNews/managerFilter/add/','Admin\newNewsController@classManagerAdd');
@@ -46,6 +47,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 
     //我的開課
     Route::get('/myCourse','Admin\myCourseController@index');
+    Route::get('/myCourse/create','Admin\myCourseController@create');
+    Route::post('/myCourse/create','Admin\myCourseController@store');
+    Route::get('/myCourse/manager','Admin\myCourseController@manager');
 
     
 
