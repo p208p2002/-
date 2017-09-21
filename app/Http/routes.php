@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/test', function () {
     return view('index');
+});
+
+Route::get('/', function () {
+    return view('website/index');
 });
 
 //使用者後台
@@ -55,8 +59,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 
 });
 
-
-
+Route::get('/t1',function(){
+    return "ok";
+});
 
 Route::auth();
 
