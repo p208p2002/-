@@ -46,16 +46,8 @@
     <span class="input-group-addon">
     <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
     </span>
-    <?php $className = DB::table('newnewsclass')->where('id', $data->classid )->first(); ?>
     <label  class="form-control col-2">
-    <?php 
-    try{
-        echo $className->className;
-    }
-    catch (\Exception $e){
-        echo "其他";
-    }
-    ?>
+    {{ App\Newnewsarticle::find($data->id)->getClassName() }}
     </label>
     <label  class="form-control">{{ $data->title }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>

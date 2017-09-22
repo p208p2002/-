@@ -80,30 +80,18 @@
 					</tr>
 				</thead>
 				<tbody>
+				
+				@foreach($datas as $data)
 				<tr>
 					<td></td>
-					<td>1</td>
-					<td>Mark</td>
-					<td  class="text-center">Ottooooo</td>
-					<td>@mdo1111111</td>
+					<td>{{ $data->id }}</td>
+					<td>{{ App\Newnewsarticle::find($data->id)->getClassName() }}</td>
+					<td  class="text-center">{{ $data->title }}</td>
+					<td> {{ $data->	createtime }}</td>
 					<td></td>
 				</tr>
-				<tr>
-					<td></td>
-					<td>1</td>
-					<td>Mark</td>
-					<td class="text-center">Ottooooo</td>
-					<td>@mdo1111111</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>1</td>
-					<td>Mark</td>
-					<td class="text-center">Ottooooo</td>
-					<td>@mdo1111111</td>
-					<td></td>
-				</tr>
+				@endforeach
+
 				</tbody>
 			  </table>
 			  <div class="row">

@@ -16,7 +16,13 @@ Route::get('/test', function () {
 });
 
 Route::get('/', function () {
-    return view('website/index');
+    //查詢前10筆最新消息
+    $datas=DB::table('newnewsarticle')
+    ->skip(0)
+    ->take(10)
+    ->orderBy('id', 'desc')
+    ->get();
+    return view('website/index',["datas"=>$datas]);
 });
 
 //使用者後台
@@ -60,7 +66,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 });
 
 Route::get('/t1',function(){
-    return dd(Auth::User()->isAdmin());
+    return dd(App\Newnewsarticle::find(3)->getClassName());
 });
 
 Route::auth();
