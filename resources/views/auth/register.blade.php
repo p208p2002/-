@@ -28,7 +28,7 @@
                             <label for="schoolCode" class="col-md-4 control-label">學號</label>
 
                             <div class="col-md-6">
-                                <input id="schoolCode" type="text" class="form-control" name="schoolCode" value="{{ old('schoolCode') }}">
+                                <input id="schoolCode" type="text" class="form-control" name="schoolCode">
 
                                 @if ($errors->has('schoolCode'))
                                     <span class="help-block">

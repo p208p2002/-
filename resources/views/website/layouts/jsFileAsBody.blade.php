@@ -4,4 +4,4 @@
 <script src={{ url('website/js/carousel.js') }}></script>
 <script src={{ url('website/js/jquery.cslider.js') }}></script>
 <script src={{ url('website/js/slider.js') }}></script>
-<script defer="defer" src="js/custom.js"></script>
+<script defer="defer" src={{ url('website/js/custom.js') }}></script>

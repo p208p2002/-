@@ -60,7 +60,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 });
 
 Route::get('/t1',function(){
-    return "ok";
+    return dd(Auth::User()->isAdmin());
 });
 
 Route::auth();

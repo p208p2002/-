@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -12,7 +13,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','schoolCode',
     ];
 
     /**
@@ -24,4 +25,18 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function isAdmin()
+    {
+        try{
+            if(Auth::check()){
+                if(Auth::user()->userLevel==5)
+                    return 1;
+            }
+            return 0;
+        }
+        catch (\Exception $e){
+            return 0;
+        }
+        return 0;
+    }
 }
