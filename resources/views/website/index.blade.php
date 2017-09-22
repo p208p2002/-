@@ -11,7 +11,8 @@
 			<div class="col-1"></div>
 			<div class="col">
 				<a class="navbar-brand" href={{ url('./') }}>
-					<img src={{ url('./website/img/logo.png') }} width="150" class="d-inline-block align-top" alt="">
+					<img src="https://image.flaticon.com/icons/svg/511/511183.svg" alt="" width="100" srcset="">
+					<img src={{ url('./website/img/logo.png') }} width="800" class="d-inline-block align-top" alt="">
 				</a>
 			</div>
 			<div class="col">
@@ -25,27 +26,27 @@
 
 		<div id="da-slider" class="da-slider">
 			<div class="da-slide">
-				<h2>Twitter Bootstrap</h2>
+				<h2>Listen</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
+				<a href="#" class="da-link">Listen more</a>
 				<div class="da-img"><img src="img/parallax-slider/twitter.png" alt="image01" /></div>
 			</div>
 			<div class="da-slide">
-				<h2>Responsive Design</h2>
+				<h2>Read</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<a href="#" class="da-link">Read more</a>
 				<div class="da-img"><img src="img/parallax-slider/responsive.png" alt="image02" /></div>
 			</div>
 			<div class="da-slide">
-				<h2>HTML5</h2>
+				<h2>Talk</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
+				<a href="#" class="da-link">Talk more</a>
 				<div class="da-img"><img src="img/parallax-slider/html5.png" alt="image03" /></div>
 			</div>
 			<div class="da-slide">
-				<h2>CSS3</h2>
+				<h2>Write</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
+				<a href="#" class="da-link">Write more</a>
 				<div class="da-img"><img src="img/parallax-slider/css3.png" alt="image04" /></div>
 			</div>
 			<nav class="da-arrows">
@@ -67,53 +68,47 @@
 		<div class="newNewstable">
 			<h3 class="text-center">最新消息</h3>
 			<hr>
-			<table class="table">
+			<table class="table table-sm">
 				<thead class="thead-default border border-success">
-				  <tr>
-					<th>#</th>
-					<th>發佈時間</th>
-					<th>分類</th>
-					<th>標題</th>
-				  </tr>
+					<tr>
+						<th style="width: 5%"></th>
+						<th style="width: 10%">#</th>
+						<th style="width: 10%">分類</th>		
+						<th style="width: 50%" class="text-center">標題</th>
+						<th style="width: 20%">發佈時間</th>
+						<th style="width: 5%"></th>
+					</tr>
 				</thead>
 				<tbody>
-				  <tr>
-					<th scope="row">1</th>
+				<tr>
+					<td></td>
+					<td>1</td>
 					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-				  </tr>
-				  <tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				  </tr>
-				  <tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-				  </tr>
-				  <tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
+					<td  class="text-center">Ottooooo</td>
+					<td>@mdo1111111</td>
+					<td></td>
 				</tr>
 				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
+					<td></td>
+					<td>1</td>
+					<td>Mark</td>
+					<td class="text-center">Ottooooo</td>
+					<td>@mdo1111111</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>1</td>
+					<td>Mark</td>
+					<td class="text-center">Ottooooo</td>
+					<td>@mdo1111111</td>
+					<td></td>
 				</tr>
 				</tbody>
 			  </table>
 			  <div class="row">
-				  <div class="col-10"></div>
-				  <div class="col">
-						<button type="button" class="btn btn-light">上10則</button>
-						<button type="button" class="btn btn-light">下10則</button>
+				  <div class="col text-right">
+						<button type="button" class="btn btn-success">more</button>
 				  </div>
 			  </div>
 		</div>
@@ -128,7 +123,7 @@
 				<div class="card border-0">
 				<div class="card-body">
 					<div class="text-center">
-					<img src="https://image.flaticon.com/icons/svg/235/235296.svg" width="150" alt="..." class="rounded-circle">
+					<img src="https://image.flaticon.com/icons/svg/235/235296.svg" width="150" alt="..." class="rounded">
 					<br><br>
 					<div class="title"><h3>課程大綱</h3></div>
 					</div>
@@ -140,7 +135,7 @@
 				<div class="card border-0">
 				<div class="card-body">
 					<div class="text-center">
-						<img src="https://image.flaticon.com/icons/svg/148/148990.svg" width="150" alt="..." class="rounded-circle">
+						<img src="https://image.flaticon.com/icons/svg/148/148990.svg" width="150" alt="..." class="rounded">
 						<br><br>
 						<div class="title"><h3>好文閱讀</h3></div>
 					</div>
@@ -152,7 +147,7 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
-							<img src="https://image.flaticon.com/icons/svg/234/234694.svg" width="150" alt="..." class="rounded-circle">
+							<img src="https://image.flaticon.com/icons/svg/234/234694.svg" width="150" alt="..." class="rounded">
 							<br><br>
 							<div class="title"><h3>教學觀摩</h3></div>
 						</div>
@@ -170,7 +165,7 @@
 						<div class="card border-0">
 						<div class="card-body">
 							<div class="text-center">
-								<img src="https://image.flaticon.com/icons/svg/201/201578.svg" width="150" alt="..." class="rounded-circle">
+								<img src="https://image.flaticon.com/icons/svg/201/201578.svg" width="150" alt="..." class="rounded">
 								<br><br>
 								<div class="title"><h3>影音之旅</h3></div>
 							</div>
@@ -183,7 +178,7 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
-							<img src="https://image.flaticon.com/icons/svg/344/344422.svg" width="150" alt="..." class="rounded-circle">
+							<img src="https://image.flaticon.com/icons/svg/344/344422.svg" width="150" alt="..." class="rounded">
 							<br><br>
 							<div class="title"><h3>經典著作分享</h3></div>
 						</div>
@@ -195,7 +190,7 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
-							<img src="https://image.flaticon.com/icons/svg/201/201595.svg" width="150" alt="..." class="rounded-circle">
+							<img src="https://image.flaticon.com/icons/svg/201/201595.svg" width="150" alt="..." class="rounded">
 							<br><br>
 							<div class="title"><h3>學生成果展示</h3></div>
 						</div>
