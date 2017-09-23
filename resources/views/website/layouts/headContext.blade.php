@@ -32,3 +32,36 @@
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+
+<style>
+.cover {
+
+    overflow: hidden;
+    position:relative;
+}
+.cover:after{
+  position:absolute;
+  content:'';
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  box-shadow:0 0 30px 30px rgb(255, 255, 255) inset;
+}
+
+/*  */
+.cover-sm {
+    overflow: hidden;
+    position:relative;
+}
+.cover-sm:after{
+  position:absolute;
+  content:'';
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  box-shadow:0 0 40px 10px rgb(255, 255, 255) inset;
+}
+</style>

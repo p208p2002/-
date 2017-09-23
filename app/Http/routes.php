@@ -36,6 +36,10 @@ Route::get('/newNewsDetail/{page}',function($page){
     return view('website.newNewsDetail',['datas'=>$datas,'page'=>$page]);
 });
 
+Route::get('/goodArticle',function(){
+   return view('website.goodArticle');
+});
+
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
     Route::get('/', function () {
