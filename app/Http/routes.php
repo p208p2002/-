@@ -15,6 +15,7 @@ Route::get('/test', function () {
     return view('index');
 });
 
+//index
 Route::get('/', function () {
     //查詢前10筆最新消息
     $datas=DB::table('newnewsarticle')
@@ -23,6 +24,16 @@ Route::get('/', function () {
     ->orderBy('id', 'desc')
     ->get();
     return view('website/index',["datas"=>$datas]);
+});
+
+Route::get('/newNewsDetail/{page}',function($page){  
+    //
+    $datas=DB::table('newnewsarticle')
+    ->skip($page*10)
+    ->take(10)
+    ->orderBy('id', 'desc')
+    ->get();
+    return view('website.newNewsDetail',['datas'=>$datas,'page'=>$page]);
 });
 
 //使用者後台

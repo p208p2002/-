@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> @include('website.layouts.headContext')
+<head> 
+@include('website.layouts.headContext')
+<title>聽讀說寫:全面進擊-Engilsh Learning</title>
 </head>
 <body>
 	@include('website.layouts.topnav')
@@ -52,6 +54,7 @@
 		<!--start: Container -->
     	<div class="container">
 		<br>
+
 		<div class="newNewstable">
 			<h3 class="text-center">最新消息</h3>
 			<hr>
@@ -83,10 +86,11 @@
 			  </table>
 			  <div class="row">
 				  <div class="col text-right">
-						<button type="button" class="btn btn-success">more</button>
+					<a class="btn btn-success" href={{ url('/newNewsDetail/0') }} role="button">more</a>
 				  </div>
 			  </div>
 		</div>
+		<!-- end newNewstable -->
 
 		<hr>
 

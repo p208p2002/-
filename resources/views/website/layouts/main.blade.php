@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>聽讀說寫:全面進擊-Engilsh Learning @yield('title')</title>
 </head>
 <body>
     @include('website.layouts.topnav')

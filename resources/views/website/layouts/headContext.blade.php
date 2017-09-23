@@ -1,6 +1,5 @@
 <!-- start: Meta -->
 <meta charset="utf-8">
-<title>GotYA FREE BOOTSTRAP THEME by BootstrapMaster</title> 
 <meta name="description" content="GotYa Free Bootstrap Theme"/>
 <meta name="keywords" content="Template, Theme, web, html5, css3, Bootstrap" />
 <meta name="author" content="Łukasz Holeczek from creativeLabs"/>
