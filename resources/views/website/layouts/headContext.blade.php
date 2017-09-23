@@ -64,4 +64,8 @@
   left:0;
   box-shadow:0 0 40px 10px rgb(255, 255, 255) inset;
 }
+
+.setnav {
+    width:100%;
+}
 </style>

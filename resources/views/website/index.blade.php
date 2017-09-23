@@ -8,7 +8,9 @@
 	@include('website.layouts.topnav')
 	<!--  -->
 	@include('website.layouts.nav')
-	
+
+	<!--  -->
+		  
 	<!--  -->
 	<!-- start: Slider -->
 	<div class="slider-wrapper">
