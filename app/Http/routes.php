@@ -66,7 +66,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 });
 
 Route::get('/t1',function(){
-    return dd(App\Newnewsarticle::find(3)->getClassName());
+    return view('website.newNewsDetail');
 });
 
 Route::auth();
