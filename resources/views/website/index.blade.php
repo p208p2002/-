@@ -114,9 +114,11 @@
 				<div class="card border-0">
 				<div class="card-body">
 					<div class="text-center">
+						<a href={{ url('/goodArticle') }}>
 						<img src="https://image.flaticon.com/icons/svg/148/148990.svg" width="150" alt="..." class="rounded">
+						</a>
 						<br><br>
-						<div class="title"><h3>好文閱讀</h3></div>
+						<div class="title"><h3><a  style="color:black;" href={{ url('/goodArticle') }}>好文閱讀</a></h3></div>
 					</div>
 					<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
 				</div>
