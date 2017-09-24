@@ -8,9 +8,9 @@ class Newnewsarticle extends Model
 {
     protected $table = 'newnewsarticle';
 
-    public function getClassName (){
+    public function getClassName ($classid){
         try{
-            $rs=DB::table('newnewsclass')->where('id', $this->id )->first();
+            $rs=DB::table('newnewsclass')->where('id', $classid )->first();
             return $rs->className;
         }
         catch (\Exception $e){

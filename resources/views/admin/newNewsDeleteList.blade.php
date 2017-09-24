@@ -47,7 +47,7 @@
     <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
     </span>
     <label  class="form-control col-2">
-    {{ App\Newnewsarticle::find($data->id)->getClassName() }}
+    {{ App\Newnewsarticle::find($data->id)->getClassName($data->classid) }}
     </label>
     <label  class="form-control">{{ $data->title }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>
