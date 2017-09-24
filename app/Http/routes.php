@@ -47,6 +47,14 @@ Route::get('/goodArticle',function(){
    return view('website.goodArticle',['firstData'=>$firstData,'datas'=>$datas]);
 });
 
+Route::get('/goodArticle/{id}',function($id){
+    $datas=DB::table('goodArticle')->where('id', $id)->get();
+    return view('website.goodArticleShow',['datas'=>$datas]);
+ });
+ 
+
+
+
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
     Route::get('/', function () {

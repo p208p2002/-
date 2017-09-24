@@ -23,7 +23,7 @@ function cut_content($a,$b){
         <div class="col"></div>
     </div>
     <!-- title -->
-    <a style="color:black;" href="#"><h1 class="text-center">{{ $data->title }}</h1></a>
+    <a style="color:black;" href={{ url('/goodArticle').'/'.$data->id }}><h1 class="text-center">{{ $data->title }}</h1></a>
     <div class="row">
         <div class="col"></div>
         <!-- context -->
@@ -63,7 +63,7 @@ function cut_content($a,$b){
                     <img src={{ url('/website/img/defaule_post.jpg') }} max-width="100%" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col">
-                    <a style="color:black;" href="#"><h3 class="text">{{ $data->title }}</h3></a>
+                    <a style="color:black;" href={{ url('/goodArticle').'/'.$data->id }}><h3 class="text">{{ $data->title }}</h3></a>
                     <?php 
                         cut_content($data->context,400);
                     ?>
