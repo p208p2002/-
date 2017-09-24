@@ -8,16 +8,16 @@
 </script>
 @section('main')
 <h3>發布文章</h3>
-<form action="#" method="POST">
+<form action={{ url('/webAdmin/goodArticle/store') }} method="POST">
 {{ csrf_field() }}
 <div class="form-group">
     <div class="row">
         <div class="col-3">
             <label for="exampleInputEmail1">分類</label>
             <select class="form-control" name="classId">
-                {{--  @foreach ($datas as $data)
+                @foreach ($datas as $data)
                 <option value={{ $data->id }}>{{ $data->className }}</option>
-                @endforeach  --}}
+                @endforeach
             </select>
         </div>
         <div class="col">

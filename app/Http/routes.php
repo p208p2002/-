@@ -76,7 +76,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     //好文閱讀
     Route::get('/goodArticle','Admin\goodArticleController@index');
     Route::get('/goodArticle/create','Admin\goodArticleController@create');
-
+    Route::post('/goodArticle/store','Admin\goodArticleController@store');
     
 
 });
