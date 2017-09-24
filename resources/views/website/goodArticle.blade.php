@@ -73,8 +73,15 @@ function cut_content($a,$b){
             </div>
             <hr>
             @endforeach
+            
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">{!! $datas->render() !!}</div>
+                <div class="col"></div>
+            </div>
         </div>
     </div>
- 
+    
+    
     <!--  -->
 @endsection

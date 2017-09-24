@@ -21,7 +21,7 @@
 				<tr>
 					<td></td>
 					<td>{{ $data->id }}</td>
-					<td>{{ App\Newnewsarticle::find($data->id)->getClassName() }}</td>
+					<td>{{ App\Newnewsarticle::find($data->id)->getClassName($data->classid) }}</td>
 					<td  class="text-center"><a href={{ url('/newNewsCheck').'/'.$data->id}}>  {{ $data->title }} </a></td>
 					<td> {{ $data->	createtime }}</td>
 					<td></td>

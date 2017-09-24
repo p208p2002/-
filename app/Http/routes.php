@@ -43,8 +43,7 @@ Route::get('newNewsCheck/{id}',function($id){
 
 Route::get('/goodArticle',function(){
    $firstData=App\GoodArticle::skip(0)->orderBy('id','desc')->take(1)->get();
-   $datas=App\GoodArticle::skip(1)->orderBy('id','desc')->take(10)->get();
-
+   $datas=DB::table('goodarticle')->orderBy('id','desc')->paginate(15);
    return view('website.goodArticle',['firstData'=>$firstData,'datas'=>$datas]);
 });
 
