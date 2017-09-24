@@ -36,6 +36,11 @@ Route::get('/newNewsDetail/{page}',function($page){
     return view('website.newNewsDetail',['datas'=>$datas,'page'=>$page]);
 });
 
+Route::get('newNewsCheck/{id}',function($id){
+    $datas=DB::table('newnewsarticle')->where('id', $id)->get();
+    return view('/website/newNewsCheck',['datas'=>$datas]);
+});
+
 Route::get('/goodArticle',function(){
    return view('website.goodArticle');
 });

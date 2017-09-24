@@ -51,7 +51,9 @@
     </label>
     <label  class="form-control">{{ $data->title }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>
-    <button type="button" class="btn btn-light">查看</button>
+   
+    <a role="button" class="btn btn-secondary" href={{ url('/newNewsCheck').'/'.$data->id}}>查看</a>
+
 </div><br>
 @endforeach
 </form>
