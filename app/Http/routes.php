@@ -42,7 +42,10 @@ Route::get('newNewsCheck/{id}',function($id){
 });
 
 Route::get('/goodArticle',function(){
-   return view('website.goodArticle');
+   $firstData=App\GoodArticle::skip(0)->orderBy('id','desc')->take(1)->get();
+   $datas=App\GoodArticle::skip(1)->orderBy('id','desc')->take(10)->get();
+
+   return view('website.goodArticle',['firstData'=>$firstData,'datas'=>$datas]);
 });
 
 //使用者後台

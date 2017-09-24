@@ -18,7 +18,7 @@ class Goodarticle extends Migration
             $table->integer('classid');
             $table->integer('createrid');
             $table->string('title');
-            $table->string('context');
+            $table->text('context');
             $table->timestamp('createtime');
         });
     }
