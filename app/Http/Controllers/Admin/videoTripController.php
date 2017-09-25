@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class videoTripController extends Controller
 {
@@ -26,6 +27,7 @@ class videoTripController extends Controller
      */
     public function create()
     {
+        
         return view('admin.videoTripCreate');
     }
 
@@ -39,6 +41,7 @@ class videoTripController extends Controller
     {
         //
         // id	createrid	title	htmlframe	createtime
+        return "ok";
         
     }
 

@@ -106,6 +106,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     //影音之旅
     Route::get('/videoTrip','Admin\videoTripController@index');
     Route::get('/videoTrip/create','Admin\videoTripController@create');
+    Route::post('/videoTrip/create','Admin\videoTripController@store');
 
 });
 

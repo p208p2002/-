@@ -2,7 +2,8 @@
 
 @section('main')
     <h3>影音之旅</h3>
-    <form action="#" method="post">
+    <form action={{ url('/webAdmin/videoTrip/create') }} method="post">
+    {{ csrf_field() }}
         <div class="form-group">
             <label for="exampleFormControlTextarea1">影片標題</label>
             <input type="text" name="title" class="form-control">
