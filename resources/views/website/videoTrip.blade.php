@@ -8,7 +8,7 @@
             <img class="card-img-top" src="https://image.flaticon.com/icons/svg/122/122628.svg" height="200" width="200" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title text-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text text-secondary text-center">poster | 2018-9-1</p>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
             <img class="card-img-top" src="https://image.flaticon.com/icons/svg/122/122628.svg" height="200" width="200" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title text-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text text-secondary text-center">poster | 2018-9-1</p>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
             <img class="card-img-top" src="https://image.flaticon.com/icons/svg/122/122628.svg" height="200" width="200" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title text-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text text-secondary text-center">poster | 2018-9-1</p>
             </div>
         </div>
     </div>

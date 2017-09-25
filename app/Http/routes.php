@@ -103,6 +103,11 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/goodArticle/managerFilter/del/{id}','Admin\goodArticleController@classDel');
     Route::post('/goodArticle/managerFilter/add','Admin\goodArticleController@classAdd');
     
+    //影音之旅
+    Route::get('/videoTrip','Admin\videoTripController@index');
+    Route::get('/videoTrip/create',function(){
+        return view('admin.videoTripCreate');
+     });
 
 });
 
