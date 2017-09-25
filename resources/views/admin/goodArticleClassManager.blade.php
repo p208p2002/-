@@ -20,15 +20,15 @@
             <tbody>
 
                 {{--  list  --}}
-                {{--  @foreach($datas as $data)
+                @foreach($datas as $data)
                     <tr>
                     <td>{{ $data->className }}</td>
-                    <td><a class="btn btn-danger" href={{ url('./webAdmin/newNews/managerFilter/del')."/".$data->id }} role="button-danger">－</a></td>
+                    <td><a class="btn btn-danger" href={{ url('./webAdmin/goodArticle/managerFilter/del')."/".$data->id }} role="button-danger">－</a></td>
                     </tr>
-                @endforeach  --}}
+                @endforeach
                 
                 {{--  add  --}}
-                <form action={{ url('./webAdmin/newNews/managerFilter/add')}} method="POST">
+                <form action={{ url('./webAdmin/goodArticle/managerFilter/add')}} method="POST">
                 {{ csrf_field() }}
                 <tr>
                     <td><input type="text" name="className" class="form-control" placeholder="新增分類..."></td>

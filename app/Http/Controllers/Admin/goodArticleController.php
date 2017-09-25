@@ -97,8 +97,42 @@ class goodArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+     public function destroy(Request $request)
+     {
+         try{   
+             foreach($request->ids as $id){
+                 DB::table('goodarticle')->where('id', $id)->delete();
+             } 
+         } 
+         catch(\Exception $e){
+             // 
+         }
+        return redirect('webAdmin/goodArticle/delete');
+     }
+
+    public function destroypage()
     {
         //
+        $datas=DB::table('goodarticle')->orderBy('id','desc')->paginate(15);
+        return view('admin/goodArticleDelList',['datas'=>$datas]);
+    }
+
+    public function classManager()
+    {
+        
+        $datas=DB::table('goodarticleclass')->get();
+        return view('admin/goodArticleClassManager',['datas'=>$datas]);
+    }
+
+    public function classDel($id){
+        DB::table('goodarticleclass')->where('id',$id)->delete();
+        return redirect('webAdmin/goodArticle/managerFilter');
+    }
+
+    public function classAdd(Request $request){
+        DB::table('goodarticleclass')->insert(
+            ['className' => $request->input('className')]
+        );
+        return redirect('webAdmin/goodArticle/managerFilter');
     }
 }

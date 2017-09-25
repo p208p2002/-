@@ -92,6 +92,12 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/goodArticle','Admin\goodArticleController@index');
     Route::get('/goodArticle/create','Admin\goodArticleController@create');
     Route::post('/goodArticle/store','Admin\goodArticleController@store');
+    Route::get('/goodArticle/delete','Admin\goodArticleController@destroypage');
+    Route::post('/goodArticle/delete','Admin\goodArticleController@destroy');
+
+    Route::get('/goodArticle/managerFilter','Admin\goodArticleController@classManager');
+    Route::get('/goodArticle/managerFilter/del/{id}','Admin\goodArticleController@classDel');
+    Route::post('/goodArticle/managerFilter/add','Admin\goodArticleController@classAdd');
     
 
 });
