@@ -51,6 +51,10 @@ Route::get('/goodArticle/{id}',function($id){
     $datas=DB::table('goodArticle')->where('id', $id)->get();
     return view('website.goodArticleShow',['datas'=>$datas]);
  });
+
+ Route::get('/videoTrip',function(){
+    return view('website.videoTrip');
+ });
  
 
 

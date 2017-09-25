@@ -150,7 +150,7 @@
 							<div class="text-center">
 								<img src="https://image.flaticon.com/icons/svg/201/201578.svg" width="150" alt="..." class="rounded">
 								<br><br>
-								<div class="title"><h3>影音之旅</h3></div>
+								<div class="title"><h3><a  style="color:black;" href={{ url('/videoTrip') }}>影音之旅</a></h3></div>
 							</div>
 							<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
 						</div>
