@@ -10,11 +10,14 @@
 <div class="row">
     <div class="col-4">
         <div class="card" style="width: 20rem;">
+            <a href={{ url('/videoTrip/'.$data->id) }}>
             <img class="card-img-top" src="https://image.flaticon.com/icons/svg/122/122628.svg" height="200" width="200" alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title text-center">Card title</h4>
-                <p class="card-text text-secondary text-center">poster | 2018-9-1</p>
+                <h4 class="card-title text-center">{{ $data->title }}</h4>
+            </a>
+                <p class="card-text text-secondary text-center">{{ $data->id }} | {{ $data->createtime }}</p>
             </div>
+          
         </div>
     </div>
 @endif
@@ -22,10 +25,12 @@
 @if($key%3==1)
     <div class="col-4">
         <div class="card" style="width: 20rem;">
+            <a href={{ url('/videoTrip/'.$data->id) }}>
             <img class="card-img-top" src="https://image.flaticon.com/icons/svg/122/122628.svg" height="200" width="200" alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title text-center">Card title</h4>
-                <p class="card-text text-secondary text-center">poster | 2018-9-1</p>
+                <h4 class="card-title text-center">{{ $data->title }}</h4>
+            </a>
+                <p class="card-text text-secondary text-center">{{ $data->id }} | {{ $data->createtime }}</p>
             </div>
         </div>
     </div>
@@ -34,10 +39,12 @@
 @if($key%3==2)
     <div class="col-4">
         <div class="card" style="width: 20rem;">
+            <a href={{ url('/videoTrip/'.$data->id) }}>
             <img class="card-img-top" src="https://image.flaticon.com/icons/svg/122/122628.svg" height="200" width="200" alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title text-center">Card title</h4>
-                <p class="card-text text-secondary text-center">poster | 2018-9-1</p>
+                <h4 class="card-title text-center">{{ $data->title }}</h4>
+            </a>
+                <p class="card-text text-secondary text-center">{{ $data->id }} | {{ $data->createtime }}</p>
             </div>
         </div>
     </div>

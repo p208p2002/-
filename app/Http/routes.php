@@ -56,6 +56,12 @@ Route::get('/goodArticle/{id}',function($id){
     $datas=DB::table('videotrip')->orderBy('id','desc')->paginate(15);
     return view('website.videoTrip',['datas'=>$datas]);
  });
+
+ Route::get('/videoTrip/{id}',function($id){
+    $datas=DB::table('videotrip')->where('id',$id)->get();
+    return view('website.videoTripDetial',['datas'=>$datas]);
+ });
+ 
  
 
 
