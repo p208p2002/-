@@ -53,7 +53,8 @@ Route::get('/goodArticle/{id}',function($id){
  });
 
  Route::get('/videoTrip',function(){
-    return view('website.videoTrip');
+    $datas=DB::table('videotrip')->orderBy('id','desc')->paginate(15);
+    return view('website.videoTrip',['datas'=>$datas]);
  });
  
 
@@ -107,6 +108,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/videoTrip','Admin\videoTripController@index');
     Route::get('/videoTrip/create','Admin\videoTripController@create');
     Route::post('/videoTrip/create','Admin\videoTripController@store');
+    Route::get('/videoTrip/del','Admin\videoTripController@destroypage');
+    Route::post('/videoTrip/del','Admin\videoTripController@destroy');
 
 });
 
