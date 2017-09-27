@@ -148,7 +148,9 @@
 						<div class="card border-0">
 						<div class="card-body">
 							<div class="text-center">
+								<a href={{ url('/videoTrip') }}>
 								<img src="https://image.flaticon.com/icons/svg/201/201578.svg" width="150" alt="..." class="rounded">
+								</a>
 								<br><br>
 								<div class="title"><h3><a  style="color:black;" href={{ url('/videoTrip') }}>影音之旅</a></h3></div>
 							</div>
