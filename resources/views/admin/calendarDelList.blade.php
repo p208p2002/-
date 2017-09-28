@@ -1,12 +1,14 @@
 @extends('admin.layouts.main')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
+/*
     $(document).ready(function(){
         $("#block1-menuItem1").addClass("active");    
     });
+*/
 </script>
 @section('main')
-<h3 id="q1">好文閱讀</h3>
+<h3 id="q1">行事曆</h3>
 <small id="passwordHelpInline" class="text-muted">選擇要刪除的項目</small><br><br>
 
 <!--  -->
@@ -26,7 +28,7 @@
 
 
 <!--  -->
-<form action={{ url('webAdmin/goodArticle/delete') }} method="POST">
+<form action={{ url('webAdmin/calendar/del') }} method="POST">
 {{ csrf_field() }}
 <button type="submit" class="btn btn-danger">執行</button>
 <button type="button" class="btn btn-warning" onclick="selectAll()">全選</button>
@@ -39,12 +41,11 @@
     <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
     </span>
     <label  class="form-control col-2">
-    {{--  {{ App\Newnewsarticle::find($data->id)->getClassName($data->classid) }}  --}}
     </label>
     <label  class="form-control">{{ $data->title }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>
    
-    <a role="button" class="btn btn-secondary" href={{ url('/goodArticle').'/'.$data->id}}>查看</a>
+    <a role="button" class="btn btn-secondary" href={{ url('/calendar/'.$data->id) }}>查看</a>
 
 </div><br>
 @endforeach

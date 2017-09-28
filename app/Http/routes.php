@@ -130,6 +130,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/calendar','Admin\calendarController@index');
     Route::get('/calendar/add','Admin\calendarController@create');
     Route::post('/calendar/add','Admin\calendarController@store');
+    Route::get('/calendar/del','Admin\calendarController@destroypage');
+    Route::post('/calendar/del','Admin\calendarController@destroy');
 
 });
 

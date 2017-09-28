@@ -108,8 +108,22 @@ class calendarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        try{   
+            foreach($request->ids as $id){
+                DB::table('calendar')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return back();
+    }
+
+    public function destroypage()
+    {
+        $datas=DB::table('calendar')->orderBy('id','desc')->paginate(15);
+        return view('admin/calendarDelList',['datas'=>$datas]);
     }
 }
