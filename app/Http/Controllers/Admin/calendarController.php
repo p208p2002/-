@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Storage;
+use DB;
 
 
 class calendarController extends Controller
@@ -50,7 +51,17 @@ class calendarController extends Controller
             }
             $unique_name = md5($filename. time()).'.pdf';
             $request->file('pdfFile')->move($destinationPath,$unique_name);        
-            return "OK";
+            
+            //store
+            $fileurl='/pdf/'.$unique_name;
+            $title=$request->title;
+            $schoolName=$request->school;
+            DB::table('calendar')->insert(
+                ['schoolName' => $schoolName, 
+                'title' => $title,
+                'filepath'=> $fileurl]
+            );
+            return redirect('webAdmin/calendar');
         }
         catch (\Exception $e){
             return "發生錯誤";
