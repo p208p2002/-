@@ -62,6 +62,15 @@ Route::get('/goodArticle/{id}',function($id){
     return view('website.videoTripDetial',['datas'=>$datas]);
  });
  
+ Route::get('/calendar',function(){
+    $datas=DB::table('calendar')->get();
+    return view('website.calendar',['datas'=>$datas]);
+});
+
+Route::get('/calendar/{id}',function($id){
+    $datas=DB::table('calendar')->where('id',$id)->get();
+    return view('website.calendarCheck',['datas'=>$datas]);
+});
  
 
 
