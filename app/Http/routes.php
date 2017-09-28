@@ -119,6 +119,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 
     //行事曆
     Route::get('/calendar','Admin\calendarController@index');
+    Route::get('/calendar/add','Admin\calendarController@create');
+    Route::post('/calendar/add','Admin\calendarController@store');
 
 });
 

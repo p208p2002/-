@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Storage;
+
 
 class calendarController extends Controller
 {
@@ -28,6 +30,7 @@ class calendarController extends Controller
     public function create()
     {
         //
+        return view('admin/calendarAdd');
     }
 
     /**
@@ -38,7 +41,20 @@ class calendarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $destinationPath = public_path().'/pdf/';
+            $filename = $request->pdfFile->getclientoriginalname();
+            $filetype=$request->pdfFile->getMimeType();
+            if($filetype!='application/pdf'){
+                return "檔案格式錯誤";
+            }
+            $unique_name = md5($filename. time()).'.pdf';
+            $request->file('pdfFile')->move($destinationPath,$unique_name);        
+            return "OK";
+        }
+        catch (\Exception $e){
+            return "發生錯誤";
+        }
     }
 
     /**
