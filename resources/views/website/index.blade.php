@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{{--  wholelanguagewriting  --}}
 <html lang="en">
 <head> 
 @include('website.layouts.headContext')
@@ -29,7 +30,7 @@
 				<div class="da-img"><img src="img/parallax-slider/responsive.png" alt="image02" /></div>
 			</div>
 			<div class="da-slide">
-				<h2>Talk</h2>
+				<h2>Speak</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<a href="#" class="da-link">Talk more</a>
 				<div class="da-img"><img src="img/parallax-slider/html5.png" alt="image03" /></div>
@@ -178,6 +179,52 @@
 							<img src="https://image.flaticon.com/icons/svg/201/201595.svg" width="150" alt="..." class="rounded">
 							<br><br>
 							<div class="title"><h3>學生成果展示</h3></div>
+						</div>
+						<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
+					</div>
+					</div>
+				</div>
+
+				</div>
+				<!-- end: Row -->
+
+			<!--  -->
+			<div class="row">
+
+				<div class="col">
+						<div class="card border-0">
+						<div class="card-body">
+							<div class="text-center">
+								<a href={{ url('/videoTrip') }}>
+								<img src="https://image.flaticon.com/icons/svg/504/504677.svg" width="150" alt="..." class="rounded">
+								</a>
+								<br><br>
+								<div class="title"><h3><a  style="color:black;" href={{ url('#') }}>行事曆</a></h3></div>
+							</div>
+							<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
+						</div>
+						</div>
+				</div>
+
+				<div class="col">
+					<div class="card border-0">
+					<div class="card-body">
+						<div class="text-center">
+							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
+							<br><br>
+							<div class="title"><h3>計畫目標</h3></div>
+						</div>
+						<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
+					</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card border-0">
+					<div class="card-body">
+						<div class="text-center">
+							<img src="https://image.flaticon.com/icons/svg/567/567893.svg" width="150" alt="..." class="rounded">
+							<br><br>
+							<div class="title"><h3>演講專區</h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
 					</div>

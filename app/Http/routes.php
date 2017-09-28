@@ -117,10 +117,13 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/videoTrip/del','Admin\videoTripController@destroypage');
     Route::post('/videoTrip/del','Admin\videoTripController@destroy');
 
+    //行事曆
+    Route::get('/calendar','Admin\calendarController@index');
+
 });
 
 Route::get('/t1',function(){
-    return view('website.newNewsDetail');
+    return view('website.testview');
 });
 
 Route::auth();
