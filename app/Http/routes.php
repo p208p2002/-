@@ -133,6 +133,14 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/calendar/del','Admin\calendarController@destroypage');
     Route::post('/calendar/del','Admin\calendarController@destroy');
 
+    //課程大綱
+    Route::get('/courseMainPoint','Admin\courseMainPointController@index');
+    Route::get('/courseMainPoint/add','Admin\courseMainPointController@create');
+    Route::post('/courseMainPoint/add','Admin\courseMainPointController@store');
+    Route::get('/courseMainPoint/del','Admin\courseMainPointController@destroypage');
+    Route::post('/courseMainPoint/del','Admin\courseMainPointController@destroy');
+     
+
 });
 
 Route::get('/t1',function(){
