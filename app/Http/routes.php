@@ -62,7 +62,7 @@ Route::get('/goodArticle/{id}',function($id){
     return view('website.videoTripDetial',['datas'=>$datas]);
  });
  
- Route::get('/calendar',function(){
+Route::get('/calendar',function(){
     $datas=DB::table('calendar')->get();
     return view('website.calendar',['datas'=>$datas]);
 });
@@ -71,6 +71,17 @@ Route::get('/calendar/{id}',function($id){
     $datas=DB::table('calendar')->where('id',$id)->get();
     return view('website.calendarCheck',['datas'=>$datas]);
 });
+
+Route::get('/courseMainPoint',function(){
+    $datas=DB::table('coursemainpoint')->get();
+    return view('website.courseMainPonint',['datas'=>$datas]);
+});
+
+Route::get('/courseMainPoint/{id}',function($id){
+    $datas=DB::table('coursemainpoint')->where('id',$id)->get();
+    return view('website.courseMainPonintCheck',['datas'=>$datas]);
+});
+
  
 
 

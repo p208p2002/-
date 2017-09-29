@@ -105,10 +105,12 @@
 				<div class="card border-0">
 				<div class="card-body">
 					<div class="text-center">
+					<a href={{ url('/courseMainPoint') }}>
 					<img src="https://image.flaticon.com/icons/svg/235/235296.svg" width="150" alt="..." class="rounded">
+					</a>
 					<br><br>
-					<div class="title"><h3>課程大綱</h3></div>
-					</div>
+					<div class="title"><a style="color:black;" href={{ url('/courseMainPoint') }}><h3>課程大綱</h3></a></div>
+					</div>					
 					<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
 				</div>
 				</div>
