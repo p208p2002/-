@@ -226,9 +226,11 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
+							<a href={{ url('/SpeechActivities') }}>
 							<img src="https://image.flaticon.com/icons/svg/567/567893.svg" width="150" alt="..." class="rounded">
+							</a>
 							<br><br>
-							<div class="title"><h3>Speech Activities</h3></div>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/SpeechActivities') }}>Speech Activities</a></h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">演講活動</p>
 					</div>

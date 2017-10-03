@@ -86,6 +86,10 @@ Route::get('/classicBookShare',function(){
     return view('website.classicBookShare');
 });
 
+Route::get('/SpeechActivities',function(){
+    return view('website.SpeechActivities');
+});
+
  
 
 
