@@ -14,7 +14,7 @@
                             <label for="name" class="col-md-4 control-label">姓名</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <input placeholder="e.g. 王大明" id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -24,11 +24,30 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('schoolId') ? ' has-error' : '' }}">
+                            <label for="schoolId" class="col-md-4 control-label">學校</label>
+
+                            <div class="col-md-6">
+                                 
+                                <select class="form-control" id="exampleFormControlSelect1" name="schoolId">
+                                    <option value="1">臺中科大</option>
+                                    <option value="2">勤益科大</option>
+                                    <option value="3">靜宜大學</option>
+                                </select>
+
+                                @if ($errors->has('schoolId'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('schoolId') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('schoolCode') ? ' has-error' : '' }}">
                             <label for="schoolCode" class="col-md-4 control-label">學號</label>
 
                             <div class="col-md-6">
-                                <input id="schoolCode" type="text" class="form-control" name="schoolCode">
+                                <input placeholder="e.g. 1410132007" id="schoolCode" type="text" class="form-control" name="schoolCode">
 
                                 @if ($errors->has('schoolCode'))
                                     <span class="help-block">
@@ -42,7 +61,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input placeholder="e.g. abc@gmail.com" id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
