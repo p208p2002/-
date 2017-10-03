@@ -166,9 +166,11 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
+							<a href={{ url('/classicBookShare') }}>
 							<img src="https://image.flaticon.com/icons/svg/344/344422.svg" width="150" alt="..." class="rounded">
+							</a>
 							<br><br>
-							<div class="title"><h3>經典著作分享</h3></div>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/classicBookShare') }}>經典著作</a></h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">With supporting text below as a natural lead-in to additional content.</p>
 					</div>

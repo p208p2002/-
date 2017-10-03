@@ -82,6 +82,10 @@ Route::get('/courseMainPoint/{id}',function($id){
     return view('website.courseMainPonintCheck',['datas'=>$datas]);
 });
 
+Route::get('/classicBookShare',function(){
+    return view('website.classicBookShare');
+});
+
  
 
 
