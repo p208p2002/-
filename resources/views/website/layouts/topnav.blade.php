@@ -22,6 +22,15 @@
 		<li class="nav-item">
             <a class="nav-link" href="#">學生成果展示 <span class="sr-only">(current)</span></a>
         </li>
+		<li class="nav-item">
+            <a class="nav-link" href="#">行事曆 <span class="sr-only">(current)</span></a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" href="#">計畫目標 <span class="sr-only">(current)</span></a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" href="#">演講活動 <span class="sr-only">(current)</span></a>
+        </li>
             
 
 		</ul>
