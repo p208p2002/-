@@ -44,8 +44,7 @@
     </label>
     <label  class="form-control">{{ $data->title }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>
-   {{--  href={{ url('/calendar/'.$data->id) }}  --}}
-    <a role="button" class="btn btn-secondary" >查看</a>
+    <a role="button" class="btn btn-secondary" href={{ url('/classicBookShare').'/'.$data->id}} >查看</a>
 
 </div><br>
 @endforeach

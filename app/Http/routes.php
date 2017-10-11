@@ -87,6 +87,11 @@ Route::get('/classicBookShare',function(){
     return view('website.classicBookShare',['datas'=>$datas]);
 });
 
+Route::get('/classicBookShare/{id}',function($id){
+    $datas=DB::table('classicbook')->where('id',$id)->get();
+    return view('website.classicBookCheck',['datas'=>$datas]);
+});
+
 Route::get('/SpeechActivities',function(){
     return view('website.SpeechActivities');
 });
