@@ -120,6 +120,7 @@ class newNewsController extends Controller
 
     public function classManager()
     {
+        // dd("in");
         $datas=DB::table('newnewsclass')->get();
         return view('admin/managerFilter',['datas'=>$datas]);
     }
