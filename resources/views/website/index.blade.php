@@ -109,7 +109,7 @@
 					<img src="https://image.flaticon.com/icons/svg/235/235296.svg" width="150" alt="..." class="rounded">
 					</a>
 					<br><br>
-					<div class="title"><a style="color:black;" href={{ url('/courseMainPoint') }}><h3>Course Outline</h3></a></div>
+					<div class="title"><a style="color:black;" href={{ url('/courseMainPoint') }}><h3>syllabus</h3></a></div>
 					</div>					
 					<p class="card-text text-secondary text-center">課程大綱</p>
 				</div>
@@ -123,7 +123,7 @@
 						<img src="https://image.flaticon.com/icons/svg/148/148990.svg" width="150" alt="..." class="rounded">
 						</a>
 						<br><br>
-						<div class="title"><h3><a  style="color:black;" href={{ url('/goodArticle') }}>Good Article</a></h3></div>
+						<div class="title"><h3><a  style="color:black;" href={{ url('/goodArticle') }}>Good Articles</a></h3></div>
 					</div>
 					<p class="card-text text-secondary text-center">好文閱讀</p>
 				</div>
@@ -170,7 +170,7 @@
 							<img src="https://image.flaticon.com/icons/svg/344/344422.svg" width="150" alt="..." class="rounded">
 							</a>
 							<br><br>
-							<div class="title"><h3><a  style="color:black;" href={{ url('/classicBookShare') }}>Classic Book</a></h3></div>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/classicBookShare') }}>Classic</a></h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">經典著作</p>
 					</div>
@@ -182,7 +182,7 @@
 						<div class="text-center">
 							<img src="https://image.flaticon.com/icons/svg/201/201595.svg" width="150" alt="..." class="rounded">
 							<br><br>
-							<div class="title"><h3>Presentation</h3></div>
+							<div class="title"><h3>student performance</h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">學生成果展示</p>
 					</div>
@@ -216,9 +216,9 @@
 						<div class="text-center">
 							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
 							<br><br>
-							<div class="title"><h3>Target</h3></div>
+							<div class="title"><h3>course objectives</h3></div>
 						</div>
-						<p class="card-text text-secondary text-center">計畫目標</p>
+						<p class="card-text text-secondary text-center">教學目標</p>
 					</div>
 					</div>
 				</div>
@@ -230,7 +230,7 @@
 							<img src="https://image.flaticon.com/icons/svg/567/567893.svg" width="150" alt="..." class="rounded">
 							</a>
 							<br><br>
-							<div class="title"><h3><a  style="color:black;" href={{ url('/SpeechActivities') }}>Speech Activities</a></h3></div>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/SpeechActivities') }}>Speeches</a></h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">演講活動</p>
 					</div>
