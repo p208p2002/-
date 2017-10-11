@@ -52,16 +52,11 @@
 </div>
 @endif
 
-@if($key==(count($datas)-1))
-    @if($key%3==1 || $key%3==2)
-    </div>
-    @endif
-@endif
-
-@if(count($datas)==1)
-    </div>
-@endif
 
 @endforeach
+
+@if(count($datas)%3 !=0)
+    </div>
+@endif
  
 @endsection
