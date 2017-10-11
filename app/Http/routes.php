@@ -83,7 +83,8 @@ Route::get('/courseMainPoint/{id}',function($id){
 });
 
 Route::get('/classicBookShare',function(){
-    return view('website.classicBookShare');
+    $datas=DB::table('classicbook')->orderBy('id','desc')->paginate(15);
+    return view('website.classicBookShare',['datas'=>$datas]);
 });
 
 Route::get('/SpeechActivities',function(){
