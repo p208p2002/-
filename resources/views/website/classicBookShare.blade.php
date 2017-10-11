@@ -47,5 +47,7 @@
 @if(sizeof($datas)%3 != 1)
 </div>
 @endif
+
+{!! $datas->render() !!}
   
 @endsection
