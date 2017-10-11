@@ -7,6 +7,7 @@
   {{--  <a id="block1-menuItem4" href={{ url('/webAdmin/homework') }} class="list-group-item list-group-item-action">課堂作業</a>  --}}
   <a id="block1-menuItem4" href={{ url('/webAdmin/courseMainPoint') }} class="list-group-item list-group-item-action">課程大綱</a>
   <a id="block1-menuItem5" href={{ url('/webAdmin/calendar') }} class="list-group-item list-group-item-action">行事曆</a>
+  <a id="block1-menuItem5" href={{ url('/webAdmin/classicBook') }} class="list-group-item list-group-item-action">經典著作</a>
 </div><br>
 
 <h3>後台操作</h3>

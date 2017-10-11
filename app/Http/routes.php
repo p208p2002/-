@@ -158,7 +158,12 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::post('/courseMainPoint/add','Admin\courseMainPointController@store');
     Route::get('/courseMainPoint/del','Admin\courseMainPointController@destroypage');
     Route::post('/courseMainPoint/del','Admin\courseMainPointController@destroy');
-     
+
+    //經典著作
+    Route::get('/classicBook','Admin\classicBookController@index');
+    Route::get('/classicBook/add','Admin\classicBookController@create');
+    Route::post('/classicBook/add','Admin\classicBookController@store');
+    
 
 });
 

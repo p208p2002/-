@@ -135,9 +135,9 @@
 						<div class="text-center">
 							<img src="https://image.flaticon.com/icons/svg/234/234694.svg" width="150" alt="..." class="rounded">
 							<br><br>
-							<div class="title"><h3>Teaching Demonstration</h3></div>
+							<div class="title"><h3>Online Course</h3></div>
 						</div>
-						<p class="card-text text-secondary text-center">教學觀摩</p>
+						<p class="card-text text-secondary text-center">線上課程</p>
 					</div>
 					</div>
 				</div>
