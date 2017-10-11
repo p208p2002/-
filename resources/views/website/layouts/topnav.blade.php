@@ -1,9 +1,26 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light setnav">
     <div class="col-1"></div>
-	<a class="navbar-brand" href="#">首頁</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+	@if(!Auth::check())
+	<div class="navbar-toggler">
+			<a href={{ url('./register') }}>註冊</a>
+			<a href={{ url('./login') }}>登入</a>	
+	</div>
+	@endif
+
+	<select name="forma" onchange="location = this.value;" class="navbar-toggler">
+	<option value="#">選擇...</option>
+	@if(Auth::check())
+		<option value={{ url('./logout') }}>登出</option>
+		@if(Auth::user()->isAdmin())
+		<option value={{ url('./webAdmin') }}>網站管理</option>
+		@else
+		<option value={{ url('./memberPlantform') }}>學生中心</option>
+		@endif
+		<option value="#">------</option>
+	@endif		
+
+	<option value={{ url('/') }}>回首頁</option>
+	</select>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
