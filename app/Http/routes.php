@@ -163,6 +163,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/classicBook','Admin\classicBookController@index');
     Route::get('/classicBook/add','Admin\classicBookController@create');
     Route::post('/classicBook/add','Admin\classicBookController@store');
+    Route::get('/classicBook/del','Admin\classicBookController@destroypage');
+    Route::post('/classicBook/del','Admin\classicBookController@destroy');
     
 
 });

@@ -109,8 +109,23 @@ class classicBookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         //
+        try{   
+            foreach($request->ids as $id){
+                DB::table('classicbook')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return back();
+    }
+
+    public function destroypage()
+    {
+        $datas=DB::table('classicbook')->orderBy('id','desc')->paginate(15);
+        return view('admin/classicBookDelList',['datas'=>$datas]);
     }
 }
