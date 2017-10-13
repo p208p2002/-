@@ -28,7 +28,7 @@ class newNewsController extends Controller
      */
     public function create()
     {
-        $datas=DB::table('newNewsClass')->get();
+        $datas=DB::table('newnewsclass')->get();
         return view('admin/newNews',['datas'=>$datas]);
     }
 
