@@ -12,7 +12,7 @@ class NewNewsClass extends Migration
      */
     public function up()
     {
-        Schema::create('newNewsclass', function (Blueprint $table) {
+        Schema::create('newnewsclass', function (Blueprint $table) {
             $table->increments('id');
             $table->string('className');
         });

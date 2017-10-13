@@ -13,7 +13,7 @@ class NewNewsArticle extends Migration
     public function up()
     {
         //
-        Schema::create('NewNewsArticle', function (Blueprint $table) {
+        Schema::create('newnewsarticle', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('classid');
             $table->integer('createrid');
