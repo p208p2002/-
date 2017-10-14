@@ -48,18 +48,21 @@ function get_server_disk_usage(){
 
 
 ?>
+CPU USAGE:<br>
 <div class="progress">
-	<div class="progress-bar" role="progressbar" style="width: <?php echo get_server_cpu_usage(); ?>%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">CPU Usage(<?php echo get_server_cpu_usage(); ?>%)</div>
+	<div class="progress-bar" role="progressbar" style="width: <?php echo get_server_cpu_usage(); ?>%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo get_server_cpu_usage(); ?></div>
 </div>
 <br>
 
+MEM USAGE:<br>
 <div class="progress">
-	<div class="progress-bar" role="progressbar" style="width: <?php echo get_server_memory_usage(); ?>%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">MEM Usage(<?php echo get_server_memory_usage(); ?>%)</div>
+	<div class="progress-bar" role="progressbar" style="width: <?php echo get_server_memory_usage(); ?>%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo get_server_memory_usage(); ?></div>
 </div>
 <br>
 
+DISK USAGE:<br>
 <div class="progress">
-	<div class="progress-bar" role="progressbar" style="width: <?php echo get_server_disk_usage(); ?>%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">DISK Usage(<?php echo get_server_disk_usage(); ?>%)</div>
+	<div class="progress-bar" role="progressbar" style="width: <?php echo get_server_disk_usage(); ?>%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo get_server_disk_usage(); ?></div>
 </div>
 <br>
 
