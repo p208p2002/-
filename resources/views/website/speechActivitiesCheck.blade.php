@@ -14,9 +14,9 @@
    @endif
 
    <div class="border border-success">
-    <div class="container">
+   <div class="container">
    <p>{!! $data->context !!}</p>
-</div>
+   </div>
    </div>
    @endforeach
 
