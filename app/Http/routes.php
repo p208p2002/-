@@ -176,6 +176,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/speeches','Admin\speechesController@index');
     Route::get('/speeches/add','Admin\speechesController@create');
     Route::post('/speeches/add','Admin\speechesController@store');
+    Route::get('/speeches/del','Admin\speechesController@destroypage');
+    Route::post('/speeches/del','Admin\speechesController@destroy');
 
 });
 
