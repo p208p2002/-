@@ -10,11 +10,14 @@
    @endif
 
    @if($data->imgfile!="empty")
-   <img src={{ url('/').$data->imgfile }} width="480" alt="" srcset="">
+   <img src={{ url('/').$data->imgfile }} width="480" alt="" srcset=""><br><br><br>
    @endif
 
-   
+   <div class="border border-success">
+    <div class="container">
    <p>{!! $data->context !!}</p>
+</div>
+   </div>
    @endforeach
-   
+
 @endsection
