@@ -182,7 +182,7 @@
 						<div class="text-center">
 							<img src="https://image.flaticon.com/icons/svg/201/201595.svg" width="150" alt="..." class="rounded">
 							<br><br>
-							<div class="title"><h3>student performance</h3></div>
+							<div class="title"><h3>Student performance</h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">學生成果展示</p>
 					</div>
@@ -216,7 +216,7 @@
 						<div class="text-center">
 							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
 							<br><br>
-							<div class="title"><h3>course objectives</h3></div>
+							<div class="title"><h3>Course objectives</h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">教學目標</p>
 					</div>
