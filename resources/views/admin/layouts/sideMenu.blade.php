@@ -8,6 +8,7 @@
   <a id="block1-menuItem4" href={{ url('/webAdmin/courseMainPoint') }} class="list-group-item list-group-item-action">課程大綱</a>
   <a id="block1-menuItem5" href={{ url('/webAdmin/calendar') }} class="list-group-item list-group-item-action">行事曆</a>
   <a id="block1-menuItem5" href={{ url('/webAdmin/classicBook') }} class="list-group-item list-group-item-action">經典著作</a>
+  <a id="block1-menuItem5" href={{ url('/webAdmin/speeches') }} class="list-group-item list-group-item-action">演講活動</a>
 </div><br>
 
 <h3>後台操作</h3>

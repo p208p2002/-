@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Classicbook extends Migration
+class Speeches extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class Classicbook extends Migration
     public function up()
     {
         //
-        Schema::create('classicbook', function (Blueprint $table) {
+        Schema::create('speeches', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('eventname');
+            $table->string('eventdate');
             $table->text('context');
-            $table->string('filepath');
-            $table->timestamp('createtime');
+            $table->string('pdffile');
+            $table->string('imgfile');
         });
     }
 

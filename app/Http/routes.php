@@ -172,6 +172,10 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/classicBook/del','Admin\classicBookController@destroypage');
     Route::post('/classicBook/del','Admin\classicBookController@destroy');
     
+    //演講活動
+    Route::get('/speeches','Admin\speechesController@index');
+    Route::get('/speeches/add','Admin\speechesController@create');
+    Route::post('/speeches/add','Admin\speechesController@store');
 
 });
 
