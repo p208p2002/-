@@ -30,7 +30,7 @@
     </label>
     <label  class="form-control">{{ $data->eventname }}</label>
    
-    {{--  <a role="button" class="btn btn-secondary" href={{ url('/newNewsCheck').'/'.$data->id}}>查看</a>  --}}
+    <a role="button" class="btn btn-secondary" href={{ url('/SpeechActivities').'/'.$data->id}}>查看</a>
 
 </div><br>
 @endforeach
