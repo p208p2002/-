@@ -40,6 +40,7 @@
     @endif
 
 @endforeach
+
 <!--  -->
 @if(sizeof($datas)%3 == 2)
 <div class="col"></div>

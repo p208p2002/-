@@ -93,10 +93,14 @@ Route::get('/classicBookShare/{id}',function($id){
 });
 
 Route::get('/SpeechActivities',function(){
-    return view('website.SpeechActivities');
+    $datas=DB::table('speeches')->orderBy('id','desc')->paginate(15);
+    return view('website.speechActivities',['datas'=>$datas]);
 });
 
- 
+Route::get('/SpeechActivities/{id}',function($id){
+    $datas=DB::table('speeches')->where('id',$id)->get();
+    return view('website.speechActivitiesCheck',['datas'=>$datas]);
+});
 
 
 
