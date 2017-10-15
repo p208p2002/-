@@ -115,7 +115,7 @@
 					<img src="https://image.flaticon.com/icons/svg/235/235296.svg" width="150" alt="..." class="rounded">
 					</a>
 					<br><br>
-					<div class="title"><a style="color:black;" href={{ url('/courseMainPoint') }}><h3>syllabus</h3></a></div>
+					<div class="title"><a style="color:black;" href={{ url('/courseMainPoint') }}><h3>Syllabus</h3></a></div>
 					</div>					
 					<p class="card-text text-secondary text-center">課程大綱</p>
 				</div>
