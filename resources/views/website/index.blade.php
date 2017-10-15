@@ -214,9 +214,11 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
+							<a href={{ url('/curse-objectives') }}>
 							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
+							</a>
 							<br><br>
-							<div class="title"><h3>Course objectives</h3></div>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/curse-objectives') }}>Course objectives</a></h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">教學目標</p>
 					</div>

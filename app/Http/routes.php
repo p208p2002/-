@@ -102,6 +102,10 @@ Route::get('/SpeechActivities/{id}',function($id){
     return view('website.speechActivitiesCheck',['datas'=>$datas]);
 });
 
+Route::get('/curse-objectives',function(){
+    $data=DB::table('courseobjectives')->orderBy('id','desc')->first();
+    return view('website.courseObjectives',['data'=>$data]);
+});
 
 
 //使用者後台
@@ -183,6 +187,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/speeches/del','Admin\speechesController@destroypage');
     Route::post('/speeches/del','Admin\speechesController@destroy');
 
+    //教學目標
+    Route::get('/course-objectives','Admin\courseObjectivesController@create');
+    Route::post('/course-objectives','Admin\courseObjectivesController@store');
 });
 
 Route::get('/t1',function(){

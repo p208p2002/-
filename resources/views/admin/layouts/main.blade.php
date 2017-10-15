@@ -13,8 +13,8 @@
 <body>
       <div class="container">
             <div class="row">
-                  <div class="col-11"><a href={{ url('/') }} >回前台首頁</a></div>
-                  <div class="col">beta</div>
+                  <div class="col-10"><a href={{ url('/') }} >回前台首頁</a></div>
+                  <div class="col">alpha v0.1</div>
             </div>
             <div class="row">
                   <div class="col-3">@include('admin.layouts.sideMenu')</div>
