@@ -10,8 +10,13 @@
 	overflow-x: hidden;
 	}
 </style>
+
+{{--  icons  --}}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
 </head>
 <body>
+
 	@include('website.layouts.topnav')
 	<!--  -->
 	@include('website.layouts.nav')

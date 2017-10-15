@@ -7,51 +7,62 @@
 	</div>
 	<!-- end: Footer Menu -->
 
-	<div class="container-fluid" id="footer">
-			<div class="row">
-				<div class="col-1"></div>
-				<div class="col">
-					<ul class="list-unstyled">
-						<li class="media">
-                            <img class="d-flex mr-3" src="http://aeit.nutc.edu.tw/images/NUTC.png" alt="Generic placeholder image">
-                            <div class="media-body">
-                            <!-- <h5 class="mt-0 mb-1">臺中科大</h5> -->
-                            <!-- <hr> -->
-                            <!-- best school best school best school best school best school -->
-                            </div>
-					</ul>
-				</div>
-				<div class="col">
-					<ul class="list-unstyled">
-						<li class="media">
-							<img class="d-flex mr-3" src="http://aeit.nutc.edu.tw/images/NCUT.png" alt="Generic placeholder image">
-							<div class="media-body">
-							<!-- <h5 class="mt-0 mb-1">勤益科大</h5> -->
-							<!-- <hr> -->
-							<!-- best school best school best school best school best school -->
-						</div>
-					</ul>
-				</div>
-				<div class="col">
-					<ul class="list-unstyled">
-						<li class="media">
-							<img class="d-flex mr-3" src="http://aeit.nutc.edu.tw/images/PU.png" alt="Generic placeholder image">
-							<div class="media-body">
-							<!-- <h5 class="mt-0 mb-1">靜宜大學</h5> -->
-							<!-- <hr> -->
-							<!-- best school best school best school best school best school -->
-						</div>
-					</ul>
-				</div>
-				<div class="col-1"></div>
-			</div>
-			<br>
-			<hr>
+<div class="container-fluid" id="footer">
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col">
+			<img class="d-flex mr-3" src="http://aeit.nutc.edu.tw/images/NUTC.png" alt="Generic placeholder image">
+		</div>
+		<div class="col">
+			<img class="d-flex mr-3" src="http://aeit.nutc.edu.tw/images/NCUT.png" alt="Generic placeholder image">
+		</div>
+		<div class="col">
+			<img class="d-flex mr-3" src="http://aeit.nutc.edu.tw/images/PU.png" alt="Generic placeholder image">
+		</div>
+		<div class="col-1"></div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col"><h5 class="text-center">臺中科大</h5></div>
+		<div class="col"><h5 class="text-center">勤益科大</h5></div>
+		<div class="col"><h5 class="text-center">靜宜大學</h5></div>
+		<div class="col-1"></div>
+	</div>
 
-			<div class="row">
-				<div class="col">
-					<p class="text-right">2017臺中科大</p>
-				</div>
-				<div class="col-1"></div>
-			</div>
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col"><hr></div>
+		<div class="col"><hr></div>
+		<div class="col"><hr></div>
+		<div class="col-1"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col"><p><span class="oi oi-link-intact"></span><a href="http://www.nutc.edu.tw"> http://www.nutc.edu.tw</a></p></div>
+		<div class="col"><p><span class="oi oi-link-intact"></span><a href="http://www.ncut.edu.tw"> http://www.ncut.edu.tw</a></p></div>
+		<div class="col"><p><span class="oi oi-link-intact"></span><a href="http://www.pu.edu.tw/"> http://www.pu.edu.tw/</a></p></div>
+		<div class="col-1"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col"><p><span class="oi oi-map-marker"></span> 404台中市北區三民路三段129號</p></div>
+		<div class="col"><p><span class="oi oi-map-marker"></span> 427台中市太平區中山路二段57號</p></div>
+		<div class="col"><p><span class="oi oi-map-marker"></span> 433台中市沙鹿區台灣大道七段200號</p></div>
+		<div class="col-1"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col"><p><span class="oi oi-home"></span> 04-22195678</p></div>
+		<div class="col"><p><span class="oi oi-home"></span> 04-23924505</p></div>
+		<div class="col"><p><span class="oi oi-home"></span> 04-26328001</p></div>
+		<div class="col-1"></div>
+	</div>
+	<hr>
+	<p class="text-right">Enligsh-learn-web 2017&nbsp;</p>
 </div>
+
+
