@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>聽讀說寫:全面進擊-Engilsh Learning @yield('title')</title>
+    <style>
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+    </style>
 </head>
 <body>
     @include('website.layouts.topnav')

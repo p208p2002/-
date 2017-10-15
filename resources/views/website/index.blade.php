@@ -4,6 +4,12 @@
 <head> 
 @include('website.layouts.headContext')
 <title>聽讀說寫:全面進擊-Engilsh Learning</title>
+<style>
+	html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+	}
+</style>
 </head>
 <body>
 	@include('website.layouts.topnav')
@@ -214,7 +220,7 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
-							<a href={{ url('/curse-objectives') }}>
+							<a href={{ url('/calendar') }}>
 							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
 							</a>
 							<br><br>

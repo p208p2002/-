@@ -12,11 +12,6 @@
   <a id="block1-menuItem5" href={{ url('/webAdmin/course-objectives') }} class="list-group-item list-group-item-action">教學目標</a>
 </div><br>
 
-<h3>後台操作</h3>
-<div class="list-group">
-  {{--  <a id="block1-menuItem1" href={{ url('/webAdmin/myCourse') }} class="list-group-item list-group-item-action">我的開課</a>  --}}
-</div><br>
-
 <h3>其他操作</h3>
 <ul class="list-group">
     <li class="list-group-item"><a href={{ url('/logout') }}>登出</a></li>

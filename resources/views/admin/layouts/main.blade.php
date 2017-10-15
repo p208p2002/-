@@ -16,9 +16,17 @@
                   <div class="col-10"><a href={{ url('/') }} >回前台首頁</a></div>
                   <div class="col">alpha v0.1</div>
             </div>
+           
             <div class="row">
-                  <div class="col-3">@include('admin.layouts.sideMenu')</div>
+                  <!-- show on pc or tablet -->
+                  <div class="col-3 d-none d-md-block">@include('admin.layouts.sideMenu')</div>
+                  <!-- main -->
                   <div class="col">@yield('main')</div>
+            </div>
+
+             <!-- show on mobile -->
+            <div class="d-block d-md-none">
+                  @include('admin.layouts.sideMenu')
             </div>
       </div>
 
