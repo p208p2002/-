@@ -27,25 +27,25 @@
 				<h2>Listen</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<a href="#" class="da-link">Listen more</a>
-				<div class="da-img"><img src="img/parallax-slider/twitter.png" alt="image01" /></div>
+				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/136/136223.svg" width="180" alt="image01" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>Read</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<a href="#" class="da-link">Read more</a>
-				<div class="da-img"><img src="img/parallax-slider/responsive.png" alt="image02" /></div>
+				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/234/234616.svg" width="180" alt="image02" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>Speak</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<a href="#" class="da-link">Talk more</a>
-				<div class="da-img"><img src="img/parallax-slider/html5.png" alt="image03" /></div>
+				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/547/547049.svg" width="180" alt="image03" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>Write</h2>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 				<a href="#" class="da-link">Write more</a>
-				<div class="da-img"><img src="img/parallax-slider/css3.png" alt="image04" /></div>
+				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/164/164962.svg" width="180" alt="image04" /></div>
 			</div>
 			<nav class="da-arrows">
 				<span class="da-arrows-prev"></span>
