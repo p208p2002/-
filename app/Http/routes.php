@@ -190,6 +190,17 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     //教學目標
     Route::get('/course-objectives','Admin\courseObjectivesController@create');
     Route::post('/course-objectives','Admin\courseObjectivesController@store');
+
+    //線上課程
+    Route::get('/online-course','Admin\onlineCourseController@index');
+    Route::get('/online-course/add','Admin\onlineCourseController@create');
+    Route::post('/online-course/add','Admin\onlineCourseController@store');
+    Route::get('/online-course/del','Admin\onlineCourseController@destroypage');
+    Route::post('/online-course/del','Admin\onlineCourseController@destroy');
+
+    Route::get('/online-course/manager-filter','Admin\onlineCourseController@mfclass');
+    Route::post('/online-course/manager-filter','Admin\onlineCourseController@mfclassadd');
+    Route::get('/online-course/manager-filter/{id}','Admin\onlineCourseController@mfclassdel');
 });
 
 Route::get('/t1',function(){
