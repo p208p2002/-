@@ -260,6 +260,33 @@
 				<!-- end: Row -->
 
 			<hr>
+			
+			<div class="row">
+				<div class="col">
+				<div class="icons-box-vert">
+				<img src="https://image.flaticon.com/icons/svg/204/204286.svg" width="70" alt="..." class="rounded" alt="" srcset="">
+				<div class="icons-box-vert-info">
+					<h3>Activity Record</h3>
+					<br>
+					<hr>
+					<p>活動紀實</p>
+				</div>
+				<div class="clear"></div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="icons-box-vert">
+				<img src="https://image.flaticon.com/icons/svg/236/236816.svg" width="70" alt="..." class="rounded" alt="" srcset="">
+				<div class="icons-box-vert-info">
+					<h3>About Us</h3>
+					<br>
+					<hr>
+					<p>關於我們</p>
+				</div>
+				<div class="clear"></div>
+				</div>
+				</div>
+			</div>
 
 		</div>
 		<!--end: Container-->
