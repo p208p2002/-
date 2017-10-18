@@ -107,6 +107,16 @@ Route::get('/curse-objectives',function(){
     return view('website.courseObjectives',['data'=>$data]);
 });
 
+Route::get('/online-course',function(){
+    $datas=DB::table('onlinecourse')->orderBy('id','desc')->paginate(15);
+    return view('website.onlineCourse',['datas'=>$datas]);
+});
+
+Route::get('/online-course/{id}',function($id){
+    $datas=DB::table('onlinecourse')->where('id',$id)->get();
+    return view('website.onlineCourseDetial',['datas'=>$datas]);
+ });
+
 
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
