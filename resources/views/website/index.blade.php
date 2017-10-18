@@ -113,6 +113,21 @@
 			<!-- start: Row -->
 			<div class="row">
 			<div class="col">
+					<div class="card border-0">
+					<div class="card-body">
+						<div class="text-center">
+							<a href={{ url('/calendar') }}>
+							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
+							</a>
+							<br><br>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/curse-objectives') }}>Course Objectives</a></h3></div>
+						</div>
+						<p class="card-text text-secondary text-center">教學目標</p>
+					</div>
+					</div>
+			</div>
+			
+			<div class="col">
 				<div class="card border-0">
 				<div class="card-body">
 					<div class="text-center">
@@ -126,52 +141,27 @@
 				</div>
 				</div>
 			</div>
+
 			<div class="col">
 				<div class="card border-0">
 				<div class="card-body">
 					<div class="text-center">
-						<a href={{ url('/goodArticle') }}>
-						<img src="https://image.flaticon.com/icons/svg/148/148990.svg" width="150" alt="..." class="rounded">
+						<a href={{ url('/SpeechActivities') }}>
+						<img src="https://image.flaticon.com/icons/svg/567/567893.svg" width="150" alt="..." class="rounded">
 						</a>
 						<br><br>
-						<div class="title"><h3><a  style="color:black;" href={{ url('/goodArticle') }}>Good Articles</a></h3></div>
+						<div class="title"><h3><a  style="color:black;" href={{ url('/SpeechActivities') }}>Speeches</a></h3></div>
 					</div>
-					<p class="card-text text-secondary text-center">好文閱讀</p>
+					<p class="card-text text-secondary text-center">演講活動</p>
 				</div>
 				</div>
 			</div>
-				<div class="col">
-					<div class="card border-0">
-					<div class="card-body">
-						<div class="text-center">
-							<img src="https://image.flaticon.com/icons/svg/234/234694.svg" width="150" alt="..." class="rounded">
-							<br><br>
-							<div class="title"><h3>Online Course</h3></div>
-						</div>
-						<p class="card-text text-secondary text-center">線上課程</p>
-					</div>
-					</div>
-				</div>
+
 			</div>
 			<!-- end: Row -->
 
 			<!--  -->
 			<div class="row">
-
-				<div class="col">
-						<div class="card border-0">
-						<div class="card-body">
-							<div class="text-center">
-								<a href={{ url('/videoTrip') }}>
-								<img src="https://image.flaticon.com/icons/svg/201/201578.svg" width="150" alt="..." class="rounded">
-								</a>
-								<br><br>
-								<div class="title"><h3><a  style="color:black;" href={{ url('/videoTrip') }}>Video Trip</a></h3></div>
-							</div>
-							<p class="card-text text-secondary text-center">影音之旅</p>
-						</div>
-						</div>
-				</div>
 
 				<div class="col">
 					<div class="card border-0">
@@ -187,6 +177,22 @@
 					</div>
 					</div>
 				</div>
+
+				<div class="col">
+					<div class="card border-0">
+					<div class="card-body">
+						<div class="text-center">
+							<a href={{ url('/goodArticle') }}>
+							<img src="https://image.flaticon.com/icons/svg/148/148990.svg" width="150" alt="..." class="rounded">
+							</a>
+							<br><br>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/goodArticle') }}>Good Articles</a></h3></div>
+						</div>
+						<p class="card-text text-secondary text-center">好文閱讀</p>
+					</div>
+					</div>
+				</div>
+
 				<div class="col">
 					<div class="card border-0">
 					<div class="card-body">
@@ -210,6 +216,35 @@
 						<div class="card border-0">
 						<div class="card-body">
 							<div class="text-center">
+								<a href={{ url('/videoTrip') }}>
+								<img src="https://image.flaticon.com/icons/svg/201/201578.svg" width="150" alt="..." class="rounded">
+								</a>
+								<br><br>
+								<div class="title"><h3><a  style="color:black;" href={{ url('/videoTrip') }}>Video Trip</a></h3></div>
+							</div>
+							<p class="card-text text-secondary text-center">影音之旅</p>
+						</div>
+						</div>
+				</div>
+
+
+				<div class="col">
+					<div class="card border-0">
+					<div class="card-body">
+						<div class="text-center">
+							<img src="https://image.flaticon.com/icons/svg/234/234694.svg" width="150" alt="..." class="rounded">
+							<br><br>
+							<div class="title"><h3>Online Course</h3></div>
+						</div>
+						<p class="card-text text-secondary text-center">線上課程</p>
+					</div>
+					</div>
+				</div>
+
+				<div class="col">
+						<div class="card border-0">
+						<div class="card-body">
+							<div class="text-center">
 								<a href={{ url('/calendar') }}>
 								<img src="https://image.flaticon.com/icons/svg/504/504677.svg" width="150" alt="..." class="rounded">
 								</a>
@@ -219,35 +254,6 @@
 							<p class="card-text text-secondary text-center">行事曆</p>
 						</div>
 						</div>
-				</div>
-
-				<div class="col">
-					<div class="card border-0">
-					<div class="card-body">
-						<div class="text-center">
-							<a href={{ url('/calendar') }}>
-							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
-							</a>
-							<br><br>
-							<div class="title"><h3><a  style="color:black;" href={{ url('/curse-objectives') }}>Course Objectives</a></h3></div>
-						</div>
-						<p class="card-text text-secondary text-center">教學目標</p>
-					</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card border-0">
-					<div class="card-body">
-						<div class="text-center">
-							<a href={{ url('/SpeechActivities') }}>
-							<img src="https://image.flaticon.com/icons/svg/567/567893.svg" width="150" alt="..." class="rounded">
-							</a>
-							<br><br>
-							<div class="title"><h3><a  style="color:black;" href={{ url('/SpeechActivities') }}>Speeches</a></h3></div>
-						</div>
-						<p class="card-text text-secondary text-center">演講活動</p>
-					</div>
-					</div>
 				</div>
 
 				</div>
