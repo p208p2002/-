@@ -20,12 +20,16 @@
 <!-- start: CSS -->
 {{--  <link href={{ url('./website/css/bootstrap.css') }} rel="stylesheet">  --}}
 {{--  <link href={{ url('./website/css/bootstrap-responsive.css') }} rel="stylesheet">  --}}
+<link href={{ url('./website/css/custom.css') }} rel="stylesheet">
+
 <link href={{ url('./website/css/style.css') }} rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+
+
 <!-- end: CSS -->
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->

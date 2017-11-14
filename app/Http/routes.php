@@ -117,6 +117,10 @@ Route::get('/online-course/{id}',function($id){
     return view('website.onlineCourseDetial',['datas'=>$datas]);
  });
 
+ Route::get('about-us',function(){
+     return view('website.aboutUs');
+ });
+
 
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {

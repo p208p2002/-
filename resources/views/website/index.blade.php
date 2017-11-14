@@ -280,10 +280,12 @@
 				<div class="icons-box-vert">
 				<img src="https://image.flaticon.com/icons/svg/236/236816.svg" width="70" alt="..." class="rounded" alt="" srcset="">
 				<div class="icons-box-vert-info">
+				<a style="color:black;" href={{ url('/about-us') }}>
 					<h3>About Us</h3>
 					<br>
 					<hr>
 					<p>關於我們</p>
+				</a>
 				</div>
 				<div class="clear"></div>
 				</div>
