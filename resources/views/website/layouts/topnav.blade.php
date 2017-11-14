@@ -25,28 +25,31 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#">課程大綱 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./calendar') }} >教學目標 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">好文閱讀 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./courseMainPoint')}} >課程大綱 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">教學觀摩 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./SpeechActivities')}} >演講活動 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">經典著作分享 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./classicBookShare')}}>經典著作 <span class="sr-only">(current)</span></a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" href={{ url('./goodArticle')}}>好文閱讀 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
             <a class="nav-link" href="#">學生成果展示 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">行事曆 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./videoTrip')}}>影音之旅 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">計畫目標 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./online-course')}}>線上課程 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">演講活動 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./calendar')}}>行事曆 <span class="sr-only">(current)</span></a>
         </li>
             
 
