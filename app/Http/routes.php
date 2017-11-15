@@ -224,6 +224,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/activity-record','Admin\activityController@index');
     Route::get('/activity-record/upload','Admin\activityController@create');
     Route::post('/activity-record/upload','Admin\activityController@store');
+    Route::get('/activity-record/manager-filter','Admin\activityController@mfclass');
+    Route::post('/activity-record/manager-filter','Admin\activityController@mfclassadd');
+    Route::get('/activity-record/manager-filter/{id}','Admin\activityController@mfclassdel');
 });
 
 Route::get('/t1',function(){

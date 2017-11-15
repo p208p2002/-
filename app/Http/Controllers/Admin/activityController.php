@@ -109,8 +109,34 @@ class activityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         //
+        try{   
+            foreach($request->ids as $id){
+                // DB::table('classicbook')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return back();
+    }
+
+    public function mfclass(){
+        $albums=DB::table('activityrecordalbum')->get();
+        return view('admin.activityRecordClassManager',["datas"=>$albums]);
+    }
+
+    public function mfclassadd(Request $request){
+        DB::table('activityrecordalbum')->insert(
+            ['className' => $request->input('className')]
+        );
+        return back();
+    }
+
+    public function mfclassdel($id){
+        DB::table('activityrecordalbum')->where('id',$id)->delete();
+        return back();
     }
 }
