@@ -1,3 +1,15 @@
 .in-line{
     display: inline;
 }
+
+.img-responsive{
+    
+    display: block;
+    height: auto;
+    max-width: 100%;
+	  margin:0 auto;
+}
+.Image{
+  background:#ccc;
+  padding:30px;
+}

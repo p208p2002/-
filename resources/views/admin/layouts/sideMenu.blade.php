@@ -11,6 +11,7 @@
   <a id="block1-menuItem5" href={{ url('/webAdmin/speeches') }} class="list-group-item list-group-item-action">演講活動</a>
   <a id="block1-menuItem5" href={{ url('/webAdmin/course-objectives') }} class="list-group-item list-group-item-action">教學目標</a>
   <a id="block1-menuItem5" href={{ url('/webAdmin/online-course') }} class="list-group-item list-group-item-action">線上課程</a>
+  <a id="block1-menuItem5" href={{ url('/webAdmin/activity-record') }} class="list-group-item list-group-item-action">活動紀實</a>
 </div><br>
 
 <h3>其他操作</h3>

@@ -121,6 +121,10 @@ Route::get('/online-course/{id}',function($id){
      return view('website.aboutUs');
  });
 
+ Route::get('activity-record',function(){
+    return view('website.activityRecord');
+ });
+
 
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
@@ -215,6 +219,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/online-course/manager-filter','Admin\onlineCourseController@mfclass');
     Route::post('/online-course/manager-filter','Admin\onlineCourseController@mfclassadd');
     Route::get('/online-course/manager-filter/{id}','Admin\onlineCourseController@mfclassdel');
+
+    //活動紀實(相簿)
+    Route::get('/activity-record','Admin\activityController@index');
 });
 
 Route::get('/t1',function(){
