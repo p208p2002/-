@@ -222,6 +222,8 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 
     //活動紀實(相簿)
     Route::get('/activity-record','Admin\activityController@index');
+    Route::get('/activity-record/upload','Admin\activityController@create');
+    Route::post('/activity-record/upload','Admin\activityController@store');
 });
 
 Route::get('/t1',function(){

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -28,6 +29,8 @@ class activityController extends Controller
     public function create()
     {
         //
+        $albums=DB::table('activityrecordalbum')->get();
+        return view('admin/activityRecordUpload',['albums'=>$albums]);
     }
 
     /**
@@ -39,6 +42,8 @@ class activityController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request->userfile);
+        return "post";
     }
 
     /**
