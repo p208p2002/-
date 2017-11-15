@@ -41,9 +41,32 @@ class activityController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request->userfile);
-        return "post";
+        $fileAry=$request->userfile;
+        $fileCount=count($fileAry);
+        $destinationPath = public_path().'/img/';
+
+        foreach($fileAry as $file){
+            $filetype = $file->getMimeType();
+            if($filetype != 'image/jpeg')
+                return "檔案格式錯誤(*.jpg)";
+            $filename = $file->getclientoriginalname();
+            $uniquename = md5($filename. time()).'.jpg';
+            
+            //move to public/img
+            $file->move($destinationPath,$uniquename);
+
+            //insert database
+            $fileurl='/img/'.$uniquename;
+            $filename=$filename;
+            DB::table('activityrecord')->insert(
+                ['albumid' => $request->albumid,
+                 'filepath' => $fileurl,
+                 'filename' => $filename,
+                ]
+            );
+        }
+    
+        return back();
     }
 
     /**
