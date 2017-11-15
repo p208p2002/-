@@ -138,6 +138,11 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/', function () {
         return view('admin/index');
     });
+    //其他
+    Route::get('/video-insert-help',function(){
+        return view('admin.videoInsertHelp');
+    });
+
     //最新消息
     Route::get('/newNews','Admin\newNewsController@index');
     Route::get('/newNews/create','Admin\newNewsController@create');

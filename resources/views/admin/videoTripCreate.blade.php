@@ -10,7 +10,8 @@
             <label for="exampleFormControlTextarea1">影片嵌入</label>
             <textarea class="form-control" name="htmlframe" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <small id="emailHelp" class="form-text text-muted text-right"><a href="#">如何嵌入?</a></small>
+            <small id="emailHelp" class="form-text text-muted text-right"><a href={{ url('/webAdmin/video-insert-help') }} class="text-secondary">如何嵌入?</a></small>
+            
             <button type="submit" class="btn btn-primary">submit</button>
     </form>
 @endsection

@@ -29,7 +29,7 @@
 影片嵌入<br>
 <textarea name="videoframe" id="" cols="40" rows="3"></textarea>
 <br>
-<a href="#" class="text-secondary">如何嵌入?</a>
+<a href={{ url('/webAdmin/video-insert-help') }} class="text-secondary">如何嵌入?</a>
 <br>
 <div class="form-group">
   <label for="comment">內文</label>
