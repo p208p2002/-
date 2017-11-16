@@ -10,6 +10,20 @@
 <hr>
 <br>
 
+{{--    --}}
+@if (session()->has('status')) 
+    @if(session('status') == '0' )
+        <div class="alert alert-success" role="alert">
+        上傳成功
+        </div>
+    @else
+        <div class="alert alert-danger" role="alert">
+        沒有選擇檔案!
+        </div>
+    @endif
+@endif
+
+
 <form action={{ url('/webAdmin/activity-record/upload') }} method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
 

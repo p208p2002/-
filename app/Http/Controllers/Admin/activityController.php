@@ -40,32 +40,43 @@ class activityController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $fileAry=$request->userfile;
-        $fileCount=count($fileAry);
-        $destinationPath = public_path().'/img/';
+    {   
+        
+            $fileAry=$request->userfile;
 
-        foreach($fileAry as $file){
-            $filetype = $file->getMimeType();
-            if($filetype != 'image/jpeg')
-                return "檔案格式錯誤(*.jpg)";
-            $filename = $file->getclientoriginalname();
-            $uniquename = md5($filename. time()).'.jpg';
+            //空陣列
+            if($fileAry[0]==null){
+            $request->session()->flash('status', '-1'); 
+            return back();
+            }
+
+            $fileCount=count($fileAry);
+            $destinationPath = public_path().'/img/';
             
-            //move to public/img
-            $file->move($destinationPath,$uniquename);
-
-            //insert database
-            $fileurl='/img/'.$uniquename;
-            $filename=$filename;
-            DB::table('activityrecord')->insert(
-                ['albumid' => $request->albumid,
-                 'filepath' => $fileurl,
-                 'filename' => $filename,
-                ]
-            );
-        }
-    
+                foreach($fileAry as $file){
+                    $filetype = $file->getMimeType();
+                    if($filetype != 'image/jpeg')
+                        return "檔案格式錯誤(*.jpg)";
+                    $filename = $file->getclientoriginalname();
+                    $uniquename = md5($filename. time()).'.jpg';
+                    
+                    //move to public/img
+                    $file->move($destinationPath,$uniquename);
+        
+                    //insert database
+                    $fileurl='/img/'.$uniquename;
+                    $filename=$filename;
+                    DB::table('activityrecord')->insert(
+                        ['albumid' => $request->albumid,
+                        'filepath' => $fileurl,
+                        'filename' => $filename,
+                        ]
+                    );
+                }
+            $request->session()->flash('status', '0'); 
+        
+        
+               
         return back();
     }
 
