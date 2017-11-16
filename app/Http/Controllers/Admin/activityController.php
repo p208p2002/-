@@ -139,4 +139,9 @@ class activityController extends Controller
         DB::table('activityrecordalbum')->where('id',$id)->delete();
         return back();
     }
+
+    public function showalbum(){
+        $albums=DB::table('activityrecordalbum')->get();
+        return view('admin.activityRecord.selectAlbum',["datas"=>$albums]);
+    }
 }

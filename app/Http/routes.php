@@ -227,6 +227,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/activity-record/manager-filter','Admin\activityController@mfclass');
     Route::post('/activity-record/manager-filter','Admin\activityController@mfclassadd');
     Route::get('/activity-record/manager-filter/{id}','Admin\activityController@mfclassdel');
+    Route::get('/activity-record/del-photo/select-album','Admin\activityController@showalbum');
 });
 
 Route::get('/t1',function(){
