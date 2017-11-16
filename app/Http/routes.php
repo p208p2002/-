@@ -227,6 +227,12 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 
     //活動紀實(相簿)
     Route::get('/activity-record','Admin\activityController@index');
+    Route::get('/activity-record/upload','Admin\activityController@create');
+    Route::post('/activity-record/upload','Admin\activityController@store');
+    Route::get('/activity-record/manager-filter','Admin\activityController@mfclass');
+    Route::post('/activity-record/manager-filter','Admin\activityController@mfclassadd');
+    Route::get('/activity-record/manager-filter/{id}','Admin\activityController@mfclassdel');
+    Route::get('/activity-record/del-photo/select-album','Admin\activityController@showalbum');
 });
 
 Route::get('/t1',function(){
