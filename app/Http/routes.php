@@ -122,7 +122,8 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('activity-record',function(){
-    return view('website.activityRecord');
+    $datas=DB::table('activityrecord')->orderBy('id','desc')->paginate(15);
+    return view('website.activityRecord',["datas"=>$datas]);
  });
 
 

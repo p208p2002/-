@@ -268,10 +268,12 @@
 				<div class="icons-box-vert">
 				<img src="https://image.flaticon.com/icons/svg/204/204286.svg" width="70" alt="..." class="rounded" alt="" srcset="">
 				<div class="icons-box-vert-info">
-					<h3>Activity Record</h3>
-					<br>
-					<hr>
-					<p>活動紀實</p>
+					<a style="color:black;" href={{ url('/activity-record') }}>
+						<h3>Activity Record</h3>
+						<br>
+						<hr>
+						<p>活動紀實</p>
+					</a>
 				</div>
 				<div class="clear"></div>
 				</div>
