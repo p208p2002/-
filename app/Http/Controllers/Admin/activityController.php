@@ -18,7 +18,7 @@ class activityController extends Controller
     public function index()
     {
         //
-        return view('admin/activityRecord');
+        return view('admin.activityRecord.activityRecord');
     }
 
     /**
@@ -30,7 +30,7 @@ class activityController extends Controller
     {
         //
         $albums=DB::table('activityrecordalbum')->get();
-        return view('admin/activityRecordUpload',['albums'=>$albums]);
+        return view('admin.activityRecord.activityRecordUpload',['albums'=>$albums]);
     }
 
     /**
@@ -125,7 +125,7 @@ class activityController extends Controller
 
     public function mfclass(){
         $albums=DB::table('activityrecordalbum')->get();
-        return view('admin.activityRecordClassManager',["datas"=>$albums]);
+        return view('admin.activityRecord.activityRecordClassManager',["datas"=>$albums]);
     }
 
     public function mfclassadd(Request $request){
