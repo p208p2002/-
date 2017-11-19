@@ -26,11 +26,16 @@
 
 <form action={{ url('/webAdmin/activity-record/upload') }} method="post" enctype="multipart/form-data">
     {{ csrf_field() }}
-
     相簿選擇<br>
     <select name="albumid" id="" class="form-control col-2">
+   
     @foreach ($albums as $album)
-        <option value={{ $album->id }}> {{$album->className}} </option>
+        @if ($album->id != $default)
+            <option value={{ $album->id }}> {{$album->className}} </option>
+        @else 
+            {{--  有default(指定相簿)  --}}
+            <option selected="selected" value={{ $album->id }}> {{$album->className}} </option>
+        @endif
     @endforeach
     </select>
     <br>
