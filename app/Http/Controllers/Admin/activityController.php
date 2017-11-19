@@ -160,4 +160,16 @@ class activityController extends Controller
         $album = DB::table('activityrecord')->where('albumid',$id)->get(); 
         return view('admin.activityRecord.album',['id' => $id, 'datas' => $album]);
     }
+
+    public function delphoto(Request $request){
+        try{   
+            foreach($request->ids as $id){
+                DB::table('activityrecord')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return back();
+    }
 }
