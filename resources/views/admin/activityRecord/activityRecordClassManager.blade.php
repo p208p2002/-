@@ -7,7 +7,7 @@
 </script>
 @section('main')
 <h3>管理分類</h3>
-<small class="text-muted">自訂文章分類</small><br><br>
+<small class="text-muted">新稱或刪除相簿</small><br><br>
 <div class="row">
     <div class="col-5">
         <table class="table">
@@ -31,13 +31,13 @@
                 <form action={{ url('./webAdmin/activity-record/manager-filter')}} method="POST">
                 {{ csrf_field() }}
                 <tr>
-                    <td><input type="text" name="className" class="form-control" placeholder="新增分類..."></td>
+                    <td><input type="text" name="className" class="form-control" placeholder="新增相簿..."></td>
                     <td><button type="submit" class="btn btn-success">＋</button></td>
                 </tr>
                 </from>
-
             </tbody>
         </table>   
+        <small class="text-muted">*刪除相簿前必須清空該相簿</small><br><br>
     </div>
 </div>
 @endsection

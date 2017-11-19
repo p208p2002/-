@@ -147,7 +147,11 @@ class activityController extends Controller
     }
 
     public function mfclassdel($id){
-        DB::table('activityrecordalbum')->where('id',$id)->delete();
+        $conunt=DB::table('activityrecord')->where('albumid',$id)->get();
+        //必須要空相簿才能刪除
+        if($conunt==null){
+            DB::table('activityrecordalbum')->where('id',$id)->delete();
+        }
         return back();
     }
 
