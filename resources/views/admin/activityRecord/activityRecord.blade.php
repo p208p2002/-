@@ -11,7 +11,7 @@
 <a class="btn btn-primary" href={{ url('webAdmin/activity-record/upload') }} role="button">上傳相片</a>
 
 {{--  先選擇要操作的相簿  --}}
-<a class="btn btn-info" href={{ url('webAdmin/activity-record/del-photo/select-album') }} role="button">管理相簿</a>
+<a class="btn btn-info" href={{ url('webAdmin/activity-record/select-album') }} role="button">管理相簿</a>
 <br><br>
 
 @endsection

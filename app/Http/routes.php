@@ -122,7 +122,8 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('activity-record',function(){
-    return view('website.activityRecord');
+    $datas=DB::table('activityrecord')->orderBy('id','desc')->paginate(15);
+    return view('website.activityRecord',["datas"=>$datas]);
  });
 
 
@@ -227,16 +228,21 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 
     //活動紀實(相簿)
     Route::get('/activity-record','Admin\activityController@index');
-    Route::get('/activity-record/upload','Admin\activityController@create');
+    Route::get('/activity-record/upload/{default?}','Admin\activityController@create');
     Route::post('/activity-record/upload','Admin\activityController@store');
     Route::get('/activity-record/manager-filter','Admin\activityController@mfclass');
     Route::post('/activity-record/manager-filter','Admin\activityController@mfclassadd');
     Route::get('/activity-record/manager-filter/{id}','Admin\activityController@mfclassdel');
-    Route::get('/activity-record/del-photo/select-album','Admin\activityController@showalbum');
+    Route::get('/activity-record/select-album','Admin\activityController@showalbums');
+    Route::get('/activity-record/select-album/{id}','Admin\activityController@showalbum');
+    Route::post('/activity-record/select-album/del','Admin\activityController@delphoto');
+
 });
 
 Route::get('/t1',function(){
-    return view('website.testview');
+    $filepath='img/b0751d0e3357dbbcff41250357e55be0.jpg';
+    dd(File::exists($filepath));
+    return "ok";
 });
 
 Route::auth();

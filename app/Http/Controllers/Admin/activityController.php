@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use File;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -26,11 +27,10 @@ class activityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($default=null)
     {
-        //
         $albums=DB::table('activityrecordalbum')->get();
-        return view('admin.activityRecord.activityRecordUpload',['albums'=>$albums]);
+        return view('admin.activityRecord.activityRecordUpload',['albums'=>$albums,'default'=>$default]);
     }
 
     /**
@@ -64,7 +64,7 @@ class activityController extends Controller
                     $file->move($destinationPath,$uniquename);
         
                     //insert database
-                    $fileurl='/img/'.$uniquename;
+                    $fileurl='img/'.$uniquename;
                     $filename=$filename;
                     DB::table('activityrecord')->insert(
                         ['albumid' => $request->albumid,
@@ -151,8 +151,30 @@ class activityController extends Controller
         return back();
     }
 
-    public function showalbum(){
-        $albums=DB::table('activityrecordalbum')->get();
+    public function showalbums(){
+        $albums = DB::table('activityrecordalbum')->get();
         return view('admin.activityRecord.selectAlbum',["datas"=>$albums]);
+    }
+
+    public function showalbum($id){
+        $album = DB::table('activityrecord')->where('albumid',$id)->get(); 
+        return view('admin.activityRecord.album',['id' => $id, 'datas' => $album]);
+    }
+
+    public function delphoto(Request $request){
+        
+        try{   
+            foreach($request->paths as $path){
+                File::delete($path);
+            }
+
+            foreach($request->ids as $id){
+                DB::table('activityrecord')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return back();
     }
 }

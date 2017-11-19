@@ -18,7 +18,7 @@
             <div class="card-body">
               <h4 class="card-title text-center">{{ $data->className }}</h4>
               <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-primary">選擇此相簿</a>
+                <a href={{ action('Admin\activityController@showalbum',['id' =>$data->id]) }} class="btn btn-primary">選擇此相簿</a>
               </div>
             </div>
             <br>
