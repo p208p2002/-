@@ -240,7 +240,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
 });
 
 Route::get('/t1',function(){
-    return view('website.testview');
+    $filepath='img/b0751d0e3357dbbcff41250357e55be0.jpg';
+    dd(File::exists($filepath));
+    return "ok";
 });
 
 Route::auth();

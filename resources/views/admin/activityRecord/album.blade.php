@@ -28,6 +28,7 @@
             <div class="card-body">
               <p class="card-title text-center" style="font-size:8px;">{{ $data->filename }}<p>
               <div class="d-flex justify-content-center">
+                    <input type="hidden" name="paths[]" value={{ $data->filepath }} >
                     <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
               </div>
             </div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-
+use File;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -64,7 +64,7 @@ class activityController extends Controller
                     $file->move($destinationPath,$uniquename);
         
                     //insert database
-                    $fileurl='/img/'.$uniquename;
+                    $fileurl='img/'.$uniquename;
                     $filename=$filename;
                     DB::table('activityrecord')->insert(
                         ['albumid' => $request->albumid,
@@ -162,7 +162,12 @@ class activityController extends Controller
     }
 
     public function delphoto(Request $request){
+        
         try{   
+            foreach($request->paths as $path){
+                File::delete($path);
+            }
+
             foreach($request->ids as $id){
                 DB::table('activityrecord')->where('id', $id)->delete();
             } 
