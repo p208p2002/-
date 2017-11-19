@@ -116,7 +116,7 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
-							<a href={{ url('/calendar') }}>
+							<a href={{ url('/curse-objectives') }}>
 							<img src="https://image.flaticon.com/icons/svg/504/504651.svg" width="150" alt="..." class="rounded">
 							</a>
 							<br><br>
