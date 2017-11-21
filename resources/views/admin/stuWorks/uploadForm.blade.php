@@ -16,9 +16,9 @@
         <div class="col">
             <label for="exampleInputEmail1">選擇分類</label>
             <select class="form-control" name="classId">
-                {{--  @foreach ($datas as $data)
-                <option value={{ $data->id }}>{{ $data->className }}</option>
-                @endforeach  --}}
+                @foreach ($datas as $data)
+                    <option value={{ $data->id }}>{{ $data->className }}</option>
+                @endforeach
             </select>
         </div>
     </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -28,11 +28,15 @@ class stuWorksController extends Controller
     public function create(Request $request,$rowVal=3)
     {
         //
+        $datas=DB::table('stuworksclass')->get();
+
         if($request->has('addValue')){
             $rowVal=$request->curentValue+$request->addValue;
-            return view('admin.stuWorks.uploadForm',['rowVal' => $rowVal]);
+            return view('admin.stuWorks.uploadForm',
+            ['datas' => $datas,'rowVal' => $rowVal]);
         }
-        return view('admin.stuWorks.uploadForm',['rowVal' => $rowVal]);
+        return view('admin.stuWorks.uploadForm',
+        ['datas' => $datas ,'rowVal' => $rowVal]);
     }
 
 
