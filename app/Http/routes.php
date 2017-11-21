@@ -237,6 +237,11 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/activity-record/select-album/{id}','Admin\activityController@showalbum');
     Route::post('/activity-record/select-album/del','Admin\activityController@delphoto');
 
+    //學生成果展示
+    Route::get('/stu-works','Admin\stuWorksController@index');
+    Route::get('/stu-works/upload','Admin\stuWorksController@create');
+    Route::post('/stu-works/upload','Admin\stuWorksController@create');
+
 });
 
 Route::get('/t1',function(){
