@@ -17,7 +17,7 @@ class stuWorksController extends Controller
     public function index()
     {
         //
-        return view('admin.stuWorks.main');
+        return view('admin.stuWorks.stuWorks');
     }
 
     /**

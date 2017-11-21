@@ -12,6 +12,7 @@
 
 {{--  先選擇要操作的相簿  --}}
 <a class="btn btn-info" href={{ url('webAdmin/activity-record/select-album') }} role="button">管理相簿</a>
+<a class="btn btn-success" href={{ url('webAdmin/activity-record/manager-filter') }} role="button">新增/刪除相簿</a>
 <br><br>
 
 @endsection
