@@ -9,7 +9,7 @@
 <h3>學生成果展示</h3>
 <span class="text-secondary">上傳作品</span>
 
-<form action={{ url('/webAdmin/online-course/add') }} method="POST">
+<form action={{ url('/webAdmin/stu-works/upload') }} method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="form-group">
     <div class="row">
@@ -34,9 +34,12 @@
 @for($i=0; $i<$rowVal; $i++)
 <div class="input-group">
     <span class="input-group-addon col-1">{{ $i+1 }}</span>
-    <input class="form-control col-2" type="text" name="" id="">
-    <input class="form-control col-6" type="text" name="" id="">
-    <input class="form-control col-3" type="file" name="" id="">
+    {{--  學生名稱  --}}
+    <input name="stunames[]" class="form-control col-2" type="text" name="" id="">
+    {{--  作品名稱  --}}
+    <input name="worknames[]" class="form-control col-6" type="text" name="" id="">
+    {{--  檔案  --}}
+    <input name="userfile[]" class="form-control col-3" type="file" name="" id="">
 </div>
 @endFor
 

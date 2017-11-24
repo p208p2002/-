@@ -49,6 +49,35 @@ class stuWorksController extends Controller
     public function store(Request $request)
     {
         //
+        $stunames=$request->stunames;
+        $worknames=$request->worknames;
+        $files=$request->userfile;
+
+        //
+        $destinationPath = public_path().'/pdf/';
+
+        $count=0;// conunt loop
+
+        // dd($files);
+        foreach($files as $file){
+            if($file != null){
+                echo "in2";
+                $filetype = $file->getMimeType();
+                if($filetype != 'application/pdf')
+                    return "檔案格式錯誤(*.pdf)";
+                $filename = $file->getclientoriginalname();
+                $uniquename = md5($filename. time().rand() ).'.pdf';
+                
+                //move to public/img
+                $file->move($destinationPath,$uniquename);
+
+                //insert database
+                // dd($destinationPath.$uniquename);
+                
+            }
+            $count++;
+        }
+
     }
 
     /**
