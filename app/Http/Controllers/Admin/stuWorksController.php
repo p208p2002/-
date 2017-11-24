@@ -25,7 +25,7 @@ class stuWorksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request,$rowVal=3)
+    public function create(Request $request,$rowVal=5)
     {
         //
         $datas=DB::table('stuworksclass')->get();
@@ -52,6 +52,7 @@ class stuWorksController extends Controller
         $stunames=$request->stunames;
         $worknames=$request->worknames;
         $files=$request->userfile;
+        $classid=$request->classId;
 
         //
         $destinationPath = public_path().'/pdf/';
@@ -71,13 +72,18 @@ class stuWorksController extends Controller
                 //move to public/img
                 $file->move($destinationPath,$uniquename);
 
-                //insert database
-                // dd($destinationPath.$uniquename);
-                
+                //insert to database
+                DB::table('stuworks')->insert([
+                    'studentname' => $stunames[$count],
+                    'context' => $worknames[$count],
+                    'filepath' => 'pdf/'.$uniquename,
+                    'classid' => $classid
+                ]);
+
             }
             $count++;
         }
-
+        return redirect(action('Admin\stuWorksController@index'));
     }
 
     /**

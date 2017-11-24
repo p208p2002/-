@@ -240,6 +240,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     //學生成果展示
     Route::get('/stu-works','Admin\stuWorksController@index');
     Route::get('/stu-works/upload','Admin\stuWorksController@create');
+    Route::post('/stu-works/upload/addrow','Admin\stuWorksController@create');
     Route::post('/stu-works/upload','Admin\stuWorksController@store');
     Route::get('/stu-works/manager-filter','Admin\stuWorksController@mfclass');
     Route::post('/stu-works/manager-filter','Admin\stuWorksController@mfclassadd');

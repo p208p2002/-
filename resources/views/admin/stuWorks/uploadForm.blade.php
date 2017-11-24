@@ -44,7 +44,7 @@
 @endFor
 
 <br>  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button value="upload" type="submit" class="btn btn-primary">上傳檔案</button>
 </form>
 
 <hr>
@@ -54,7 +54,7 @@
     <div class="input-group">
         <input class="form-control col-3" type="text" name="addValue" id="" placeholder="輸入要增加的欄位數量">
         <span class="input-group-btn">
-            <button class="btn btn-success" type="submit">增加上傳欄位</button>
+            <button value="addrow" class="btn btn-success" type="submit">增加上傳欄位</button>
         </span>
     </div>
 </form>
