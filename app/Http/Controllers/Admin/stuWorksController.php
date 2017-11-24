@@ -95,4 +95,22 @@ class stuWorksController extends Controller
     {
         //
     }
+
+    public function mfclass(){
+        $datas=DB::table('stuworksclass')->get();
+        return view('admin.stuWorks.stuClassManager',['datas'=>$datas]);
+    }
+
+    public function mfclassadd(Request $request){
+        DB::table('stuworksclass')->insert(
+            ['className' => $request->input('className')]
+        );
+        return back();
+    }
+
+    public function mfclassdel($id){
+        DB::table('stuworksclass')->where('id',$id)->delete();
+        return back();
+    }
+
 }

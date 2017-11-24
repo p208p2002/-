@@ -241,6 +241,9 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/stu-works','Admin\stuWorksController@index');
     Route::get('/stu-works/upload','Admin\stuWorksController@create');
     Route::post('/stu-works/upload','Admin\stuWorksController@create');
+    Route::get('/stu-works/manager-filter','Admin\stuWorksController@mfclass');
+    Route::post('/stu-works/manager-filter','Admin\stuWorksController@mfclassadd');
+    Route::get('/stu-works/manager-filter/{id}','Admin\stuWorksController@mfclassdel');
 
 });
 
