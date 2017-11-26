@@ -126,6 +126,11 @@ Route::get('/online-course/{id}',function($id){
     return view('website.activityRecord',["datas"=>$datas]);
  });
 
+ Route::get('stu-performance',function(){
+     $datas=DB::table('stuworks')->orderBy('id','desc')->paginate(30);
+     return view('website.stuWorks',["datas"=>$datas]);
+ });
+
 
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {

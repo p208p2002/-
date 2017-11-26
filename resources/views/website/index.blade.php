@@ -197,9 +197,11 @@
 					<div class="card border-0">
 					<div class="card-body">
 						<div class="text-center">
+							<a href={{ url('/stu-performance') }}>
 							<img src="https://image.flaticon.com/icons/svg/201/201595.svg" width="150" alt="..." class="rounded">
+							</a>
 							<br><br>
-							<div class="title"><h3>Student Performance</h3></div>
+							<div class="title"><h3><a  style="color:black;" href={{ url('/stu-performance') }}>Student Performance</a></h3></div>
 						</div>
 						<p class="card-text text-secondary text-center">學生成果展示</p>
 					</div>
