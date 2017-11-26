@@ -144,8 +144,34 @@ class stuWorksController extends Controller
     }
 
     public function mfclassdel($id){
-        DB::table('stuworksclass')->where('id',$id)->delete();
+        $conunt=DB::table('stuworks')->where('classid',$id)->get();
+        //必須要空才能刪除
+        if($conunt==null){
+            DB::table('stuworksclass')->where('id',$id)->delete();
+        }
         return back();
+    }
+
+    public function showClass(){
+        $datas=DB::table('stuworksclass')->get();
+        return view('admin.stuWorks.selectClass',["datas" => $datas]);
+    }
+
+    public function showThatClass($id){
+        $datas=DB::table('stuworks')->where('classid',$id)->orderBy('id','desc')->paginate(15);
+        return view('admin.stuWorks.thatClass',['id' => $id, 'datas' => $datas]);
+    }
+
+    public function delworks(Request $request){
+        try{   
+            foreach($request->ids as $id){
+                DB::table('stuworks')->where('id', $id)->delete();
+            } 
+        } 
+        catch(\Exception $e){
+            // 
+        }
+       return back();
     }
 
 }

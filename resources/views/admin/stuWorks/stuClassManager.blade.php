@@ -39,6 +39,7 @@
                 </from>
             </tbody>
         </table>   
+        <small class="text-muted">*刪除分類前必須清空該分類</small><br><br>
     </div>
 </div>
 @endsection
