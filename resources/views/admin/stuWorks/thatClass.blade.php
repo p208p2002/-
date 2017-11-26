@@ -30,23 +30,9 @@
     <label  class="form-control">{{ $data->context }}</label>
     <label  class="form-control col-2">{{ $data->createtime }}</label>
    
-    <a role="button" class="btn btn-secondary" href={{ url('#').'/'.$data->id}}>查看</a>
+    <a role="button" class="btn btn-secondary" href={{ url('/stu-performance').'/'.$data->id }}>查看</a>
 
 </div><br>
-        {{--  <div class="card col-4" style="width: 20rem;">
-            <br>
-            <div class="d-flex justify-content-center">
-                <img class="card-img-top" height="120"  src={{ url($data->filepath) }} alt="Card image cap">
-            </div>
-            <div class="card-body">
-              <p class="card-title text-center" style="font-size:8px;">{{ $data->filename }}<p>
-              <div class="d-flex justify-content-center">
-                    <input type="hidden" name="paths[]" value={{ $data->filepath }} >
-                    <input id="checbox" name="ids[]" value={{ $data->id }} type="checkbox" aria-label="Checkbox for following text input">
-              </div>
-            </div>
-            <br>
-        </div>  --}}
     @endforeach
 </div>
 

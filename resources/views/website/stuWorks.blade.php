@@ -6,7 +6,7 @@
     @foreach($datas as $data)
     
     <div class="col-12 col-md-4 col-lg-3">
-        <a href="#" style="color:black; text-decoration:none;">
+        <a href={{ url('/stu-performance').'/'.$data->id }} style="color:black; text-decoration:none;">
         <div class="card">
             <div class="card-body">
               <h4 class="card-title text-center">學生作品{{ $data->id }}</h4>

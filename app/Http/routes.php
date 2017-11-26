@@ -131,6 +131,12 @@ Route::get('/online-course/{id}',function($id){
      return view('website.stuWorks',["datas"=>$datas]);
  });
 
+ Route::get('stu-performance/{id}',function($id){
+    $data=DB::table('stuworks')->where('id',$id)->first();
+    // dd($data);
+    return view('website.stuWorksDetail',["data"=>$data]);
+});
+
 
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
