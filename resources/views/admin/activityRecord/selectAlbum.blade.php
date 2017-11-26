@@ -20,6 +20,7 @@
               <div class="d-flex justify-content-center">
                 <a href={{ action('Admin\activityController@showalbum',['id' =>$data->id]) }} class="btn btn-primary">選擇此相簿</a>
               </div>
+              <br>
             </div>
             <br>
         </div>
