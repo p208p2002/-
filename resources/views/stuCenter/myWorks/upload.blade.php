@@ -6,7 +6,9 @@
     <p>歡迎使用學生中心</p>
     <h3>學生成果展示</h3>
 <hr>
-
+@if (Session::has('isupload')) 
+    <div class="alert alert-success" role="alert">File upload success!</div>
+@endif
 <form action={{ url('/student-center/my-works/upload') }} method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="form-group">

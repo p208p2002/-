@@ -86,6 +86,7 @@ class stuWorksController extends Controller
             }
             $count++;
         }
+        $request->session()->flash('isupload','1');
         return back();
     }
 
