@@ -139,10 +139,11 @@ Route::get('/online-course/{id}',function($id){
 
 
 //使用者後台
-Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
+Route::group(['prefix' => 'student-center','middleware' => 'isMember'], function () {
     Route::get('/', function () {
-        return "功能尚未開放";
+        return view('stuCenter.index');
     });
+    Route::get('/my-works','StuCenter\MyWorksController@index');
 });
 
 //管理者後台

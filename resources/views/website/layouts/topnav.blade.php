@@ -14,7 +14,7 @@
 		@if(Auth::user()->isAdmin())
 		<option value={{ url('./webAdmin') }}>網站管理</option>
 		@else
-		<option value={{ url('./memberPlantform') }}>學生中心</option>
+		<option value={{ url('./student-center') }}>學生中心</option>
 		@endif
 		<option value="#">------</option>
 	@endif		
@@ -68,7 +68,7 @@
 					@if(Auth::user()->isAdmin())
 					<li><a href={{ url('./webAdmin') }}>網站管理</a></li>
 					@else
-					<li><a href={{ url('./memberPlantform') }}>學生中心</a></li>
+					<li><a href={{ url('./student-center') }}>學生中心</a></li>
 					@endif
 				@endif					
 				</ul>

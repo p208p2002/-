@@ -7,13 +7,21 @@
 </script>
 @section('main')
 <h3>學生成果展示</h3>
-<span class="text-secondary">上傳作品</span>
+<hr>
 
 <form action={{ url('/webAdmin/stu-works/upload') }} method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="form-group">
     <div class="row">
         <div class="col">
+            <label for="exampleInputEmail1">選擇學校</label>
+            <select class="form-control" name="schoolId">
+                @foreach($schools as $school)
+                    <option value={{ $school->id }}>{{ $school->name }}</option>
+                @endforeach
+            </select>
+
+                
             <label for="exampleInputEmail1">選擇分類</label>
             <select class="form-control" name="classId">
                 @foreach ($datas as $data)

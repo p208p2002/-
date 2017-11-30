@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Stuworks extends Migration
+class School extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class Stuworks extends Migration
     public function up()
     {
         //
-        Schema::create('stuworks', function (Blueprint $table) {
+        Schema::create('school', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('classid');
-            $table->integer('schoolid');
-            $table->string('filepath');
-            $table->string('context');
-            $table->string('studentname');
-            $table->timestamp('createtime');
+            $table->string('name');
         });
     }
 

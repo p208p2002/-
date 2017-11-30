@@ -29,6 +29,7 @@ class stuWorksController extends Controller
     {
         //
         $datas=DB::table('stuworksclass')->get();
+        $schools=DB::table('school')->orderBy('id','asc')->get();
 
         if($request->has('addValue')){
             $rowVal=$request->curentValue+$request->addValue;
@@ -36,7 +37,7 @@ class stuWorksController extends Controller
             ['datas' => $datas,'rowVal' => $rowVal]);
         }
         return view('admin.stuWorks.uploadForm',
-        ['datas' => $datas ,'rowVal' => $rowVal]);
+        ['datas' => $datas ,'rowVal' => $rowVal,'schools' => $schools]);
     }
 
 
@@ -53,6 +54,7 @@ class stuWorksController extends Controller
         $worknames=$request->worknames;
         $files=$request->userfile;
         $classid=$request->classId;
+        $schoolid=$request->schoolId;
 
         //
         $destinationPath = public_path().'/pdf/';
@@ -77,7 +79,8 @@ class stuWorksController extends Controller
                     'studentname' => $stunames[$count],
                     'context' => $worknames[$count],
                     'filepath' => 'pdf/'.$uniquename,
-                    'classid' => $classid
+                    'classid' => $classid,
+                    'schoolid' => $schoolid
                 ]);
 
             }
