@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\StuCenter;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -28,6 +28,10 @@ class MyWorksController extends Controller
     public function create()
     {
         //
+        $datas=DB::table('stuworksclass')->get();
+        $schools=DB::table('school')->orderBy('id','asc')->get();
+
+        return view('stuCenter.myWorks.upload', ['datas' => $datas ,'schools' => $schools]);
     }
 
     /**

@@ -86,7 +86,7 @@ class stuWorksController extends Controller
             }
             $count++;
         }
-        return redirect(action('Admin\stuWorksController@index'));
+        return back();
     }
 
     /**

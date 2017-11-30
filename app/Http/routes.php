@@ -149,7 +149,11 @@ Route::group(['prefix' => 'student-center','middleware' => 'isMember'], function
     Route::get('/', function () {
         return view('stuCenter.index');
     });
+    
+    //
     Route::get('/my-works','StuCenter\MyWorksController@index');
+    Route::get('/my-works/upload','StuCenter\MyWorksController@create');
+    Route::post('/my-works/upload','Admin\stuWorksController@store');
 });
 
 //管理者後台
