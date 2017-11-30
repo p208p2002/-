@@ -127,8 +127,14 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('stu-performance',function(){
-     $datas=DB::table('stuworks')->orderBy('id','desc')->paginate(30);
-     return view('website.stuWorks',["datas"=>$datas]);
+    //  $datas=DB::table('stuworks')->orderBy('id','desc')->paginate(30);
+    //  return view('website.stuWorks',["datas"=>$datas]);
+    return view('website.stuWorksSelect');
+ });
+
+ Route::get('stu-performance/school/{id}',function($id){
+    $datas=DB::table('stuworks')->where('schoolid',$id)->orderBy('id','desc')->paginate(30);
+    return view('website.stuWorks',["datas"=>$datas]);
  });
 
  Route::get('stu-performance/{id}',function($id){
