@@ -141,7 +141,7 @@ Route::get('/online-course/{id}',function($id){
 //使用者後台
 Route::group(['prefix' => 'memberPlantform','middleware' => 'isMember'], function () {
     Route::get('/', function () {
-        return "ok";
+        return "功能尚未開放";
     });
 });
 

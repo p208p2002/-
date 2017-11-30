@@ -107,8 +107,11 @@
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
+            {{--  end panel  --}}
+            <p class="text-center text-muted">如果發生註冊問題請來信 p208p2002@gmail.com 將盡快處理</p>
         </div>
     </div>
 </div>
