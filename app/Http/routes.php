@@ -122,8 +122,15 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('activity-record',function(){
-    $datas=DB::table('activityrecord')->orderBy('id','desc')->paginate(15);
-    return view('website.activityRecord',["datas"=>$datas]);
+    //$datas=DB::table('activityrecord')->orderBy('id','desc')->paginate(15);
+    //return view('website.activityRecord',["datas"=>$datas]);
+    $datas=DB::table('activityrecordalbum')->orderBy('id','desc')->paginate(15);
+    return view('website.activityRecord.selectAlbum',['datas'=>$datas]);
+ });
+
+ Route::get('activity-record/{id}',function($id){
+    $datas=DB::table('activityrecord')->where('albumid',$id)->orderBy('id','desc')->paginate(15);
+    return view('website.activityRecord.activityRecord',["datas"=>$datas]);
  });
 
  Route::get('stu-performance',function(){
