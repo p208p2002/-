@@ -28,7 +28,7 @@
   <div class="card-body">
     <h4 class="card-title">靜宜大學</h4>
     <p class="card-text">觀看靜宜大學的作品</p>
-    <a href={{ url('/stu-performance/school/2') }} class="btn btn-success">Go</a>
+    <a href={{ url('/stu-performance/school/3') }} class="btn btn-success">Go</a>
   </div>
 </div>
 

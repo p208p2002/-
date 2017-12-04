@@ -140,7 +140,8 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('stu-performance/school/{id}',function($id){
-    $datas=DB::table('stuworks')->where('schoolid',$id)->orderBy('id','desc')->paginate(30);
+    // $datas=DB::table('stuworks')->where('schoolid',$id)->orderBy('id','desc')->paginate(30);
+    $datas=DB::table('stuworksclass')->where('schoolid',$id)->orderBy('id','desc')->paginate(30);
     return view('website.stuWorks',["datas"=>$datas]);
  });
 
