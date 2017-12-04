@@ -142,7 +142,10 @@ class stuWorksController extends Controller
 
     public function mfclassadd(Request $request){
         DB::table('stuworksclass')->insert(
-            ['className' => $request->input('className')]
+            [
+                'className' => $request->input('className'),
+                'schoolid' => $request->input('schoolid')
+            ]
         );
         return back();
     }

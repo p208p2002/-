@@ -15,6 +15,7 @@ class StuWorksClass extends Migration
         //
         Schema::create('stuworksclass', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('schoolid');
             $table->string('className');
         });
     }
