@@ -122,8 +122,6 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('activity-record',function(){
-    //$datas=DB::table('activityrecord')->orderBy('id','desc')->paginate(15);
-    //return view('website.activityRecord',["datas"=>$datas]);
     $datas=DB::table('activityrecordalbum')->orderBy('id','desc')->paginate(15);
     return view('website.activityRecord.selectAlbum',['datas'=>$datas]);
  });
@@ -134,15 +132,19 @@ Route::get('/online-course/{id}',function($id){
  });
 
  Route::get('stu-performance',function(){
-    //  $datas=DB::table('stuworks')->orderBy('id','desc')->paginate(30);
-    //  return view('website.stuWorks',["datas"=>$datas]);
     return view('website.stuWorksSelect');
  });
 
+ //選擇分類
  Route::get('stu-performance/school/{id}',function($id){
-    // $datas=DB::table('stuworks')->where('schoolid',$id)->orderBy('id','desc')->paginate(30);
     $datas=DB::table('stuworksclass')->where('schoolid',$id)->orderBy('id','desc')->paginate(30);
     return view('website.stuWorks',["datas"=>$datas]);
+ });
+
+ //顯示分類{學校id}{分類id}
+ Route::get('stu-performance/school/{id}/{classid}',function($id,$classid){
+    $datas=DB::table('stuworks')->where('schoolid',$id)->where('classid',$classid)->orderBy('id','desc')->paginate(30);
+    return view('website.stuWorks2',["datas"=>$datas]);
  });
 
  Route::get('stu-performance/{id}',function($id){

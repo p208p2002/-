@@ -54,7 +54,7 @@ class stuWorksController extends Controller
         $worknames=$request->worknames;
         $files=$request->userfile;
         $classid=$request->classId;
-        $schoolid=$request->schoolId;
+        $schoolid=DB::table('stuworksclass')->where('id',$classid)->first()->schoolid;
 
         //
         $destinationPath = public_path().'/pdf/';

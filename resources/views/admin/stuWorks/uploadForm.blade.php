@@ -16,18 +16,20 @@
 <div class="form-group">
     <div class="row">
         <div class="col">
-            <label for="exampleInputEmail1">選擇學校</label>
-            <select class="form-control" name="schoolId">
-                @foreach($schools as $school)
-                    <option value={{ $school->id }}>{{ $school->name }}</option>
-                @endforeach
-            </select>
-
-                
+         
             <label for="exampleInputEmail1">選擇分類</label>
             <select class="form-control" name="classId">
                 @foreach ($datas as $data)
-                    <option value={{ $data->id }}>{{ $data->className }}</option>
+                    <option value={{ $data->id }}>
+                        @if ($data->schoolid == 1)
+                            臺中科大
+                        @elseif ($data->schoolid == 2)
+                            勤益科大
+                        @else 
+                            靜宜大學
+                        @endif
+                        |{{ $data->className }}
+                    </option>
                 @endforeach
             </select>
         </div>
