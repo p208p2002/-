@@ -34,20 +34,19 @@
     </div>
 </div>
 
+<div class="d-none d-md-block">
 <div class="row">
-    <div class="col-1 text-center"><p>編號</p></div>
     <div class="col-2 text-center"><p>學生名稱</p></div>
     <div class="col-6 text-center"><p>作品說明/備註</p></div>
     <div class="col-3 text-center"><p>選擇檔案(*pdf only)</p></div>
 </div>
-
+</div>
 
 <div class="input-group">
-    <span class="input-group-addon col-1">1</span>
     {{--  學生名稱  --}}
-    <input name="stunames[]" class="form-control col-2" type="text" name="" id="" value={{ Auth::user()->name }}>
+    <input name="stunames[]" class="form-control col-2" type="text" name="" id="" value={{ Auth::user()->name }} placeholder="學生姓名" >
     {{--  作品名稱  --}}
-    <input name="worknames[]" class="form-control col-6" type="text" name="" id="">
+    <input name="worknames[]" class="form-control col-6" type="text" name="" id="" placeholder="作品名稱/備註">
     {{--  檔案  --}}
     <input name="userfile[]" class="form-control col-3" type="file" name="" id="">
 </div>
@@ -57,6 +56,7 @@
   <button value="upload" type="submit" class="btn btn-primary">上傳檔案</button>
 </form>
 
+<hr class="d-block d-md-none">
 
 @endsection
 
