@@ -171,6 +171,11 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/', function () {
         return view('admin/index');
     });
+
+    Route::get('/phpinfo',function(){
+        return dd(phpinfo());
+    });
+
     //其他
     Route::get('/video-insert-help',function(){
         return view('admin.videoInsertHelp');
