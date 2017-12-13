@@ -65,7 +65,7 @@ class stuWorksController extends Controller
         foreach($files as $file){
             if($file != null){
                 echo "in2";
-                dd($file);
+                // dd($file);
                 $filetype = $file->getMimeType();
                 if($filetype != 'application/pdf')
                     return "檔案格式錯誤(*.pdf)";
