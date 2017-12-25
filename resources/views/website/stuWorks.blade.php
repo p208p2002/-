@@ -9,6 +9,7 @@
         <a href={{ url('/stu-performance/school' ).'/'.$data->schoolid.'/'.$data->id }} style="color:black; text-decoration:none;">
         <div class="card">
             <div class="card-body">
+            <img src="https://image.flaticon.com/icons/png/512/554/554826.png" alt="" srcset="" class="card-img-top">
               <p class="card-text text-center">{{ $data->className }}</p>
             </div>
           </div>
