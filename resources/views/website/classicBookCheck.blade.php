@@ -16,7 +16,7 @@
    <br>
 
    @if(Auth::check())
-   <form action={{ url('./user-api') }} method="post">
+   <form action={{ url('./user-api/classicbook-response') }} method="post">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="textarea">發表回應</label>
@@ -26,7 +26,7 @@
         <input type="hidden" name="pageid" value={{ $pageid }}>
 
         <div class="d-flex justify-content-end">
-            <button class="d-flex justify-content-end" type="submit">發表回應</button>
+            <button class="btn btn-success" type="submit">發表回應</button>
         </div>
    </form>
    @else 
@@ -36,7 +36,7 @@
         <textarea class="form-control" id="textarea" rows="3" disabled> 需要登入才能發表回應 </textarea>
     </div>
     <div class="d-flex justify-content-end">
-        <button class="d-flex justify-content-end" type="submit" disabled>發表回應</button>
+        <button class="btn btn-success" type="submit" disabled>發表回應</button>
     </div>
    
    @endif
@@ -46,7 +46,14 @@
    @foreach($responses as $res)
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">{{ Auth::user()->findName($res->uid) }}</h5>
+            <div class="d-flex">
+                <h5 class="card-title">{{ Auth::user()->findName($res->uid) }}</h5>
+                @if($res->uid == Auth::user()->id)
+                    <div class="ml-auto p-2">
+                        <a href={{ url('./user-api/classicbook-response/'.$res->id) }} class="btn btn-danger">刪除</a>
+                    </div>
+                @endif
+            </div>
             <h6 class="card-subtitle mb-2 text-muted">{{ $res->createtime }}</h6>
             {{ $res->context }}
         </div>

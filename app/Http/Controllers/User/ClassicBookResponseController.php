@@ -21,4 +21,9 @@ class ClassicBookResponseController extends Controller
         DB::table('classicbookresponse')->insert(['uid'=>$uid,'bookid'=>$bookid,'context'=>$context]);
         return back();
     }
+
+    public function del($id){
+        DB::table('classicbookresponse')->where('id',$id)->delete();
+        return back();
+    }
 }

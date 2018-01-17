@@ -156,7 +156,10 @@ Route::get('/online-course/{id}',function($id){
 
 //使用者API
 Route::group(['prefix'=>'user-api','middleware' => 'isLogin'],function(){
-    Route::post('/','User\ClassicBookResponseController@store');
+    //
+    Route::post('/classicbook-response','User\ClassicBookResponseController@store');
+    Route::get('/classicbook-response/{id}','User\ClassicBookResponseController@del');
+
 });
 
 
