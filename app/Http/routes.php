@@ -89,7 +89,8 @@ Route::get('/classicBookShare',function(){
 
 Route::get('/classicBookShare/{id}',function($id){
     $datas=DB::table('classicbook')->where('id',$id)->get();
-    return view('website.classicBookCheck',['datas'=>$datas]);
+    $reponses = DB::table('classicbookresponse')->where('bookid',$id)->get();
+    return view('website.classicBookCheck',['datas'=>$datas,'pageid'=>$id,'responses'=>$reponses]);
 });
 
 Route::get('/SpeechActivities',function(){
@@ -143,8 +144,13 @@ Route::get('/online-course/{id}',function($id){
     return view('website.stuWorksDetail',["data"=>$data]);
 });
 
+//使用者API
+Route::group(['prefix'=>'user-api','middleware' => 'isLogin'],function(){
+    Route::post('/','User\ClassicBookResponseController@store');
+});
 
-//使用者後台
+
+//學生後台
 Route::group(['prefix' => 'student-center','middleware' => 'isMember'], function () {
     Route::get('/', function () {
         return view('stuCenter.index');
