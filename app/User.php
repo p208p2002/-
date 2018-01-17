@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
+use DB;
 
 class User extends Authenticatable
 {
@@ -38,5 +39,18 @@ class User extends Authenticatable
             return 0;
         }
         return 0;
+    }
+
+    // public function getName(){
+    //     $uid=Auth::user()->id;
+    //     $name=DB::table('users')->where('id',$uid)->first();
+    //     $name=$name->name;
+    //     return $name;
+    // }
+
+    public function findName($uid){
+        $name=DB::table('users')->where('id',$uid)->first();
+        $name=$name->name;
+        return $name;
     }
 }
