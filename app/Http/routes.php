@@ -15,6 +15,11 @@ Route::get('/test', function () {
     return view('index');
 });
 
+Route::get('/test1',function(){
+    return view('imgtest');
+});
+Route::post('/test1','TestController@imagetest');
+
 //index
 Route::get('/', function () {
     //查詢前10筆最新消息
