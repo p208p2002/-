@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Services\ImageService;
 
 class stuWorksController extends Controller
 {
@@ -180,6 +181,20 @@ class stuWorksController extends Controller
             // 
         }
        return back();
+    }
+    
+    public function mfclassimg(Request $request){
+        $id = $request->classid;
+        $img = $request->img;
+
+        $imageService = new ImageService();
+        $imgPath = $imageService->store($img);
+
+        DB::table('stuworksclass')
+            ->where('id',$id)
+            ->update(['imgpath'=>$imgPath]);
+
+        return back();
     }
 
 }

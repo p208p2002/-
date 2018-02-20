@@ -296,6 +296,7 @@ Route::group(['prefix' => 'webAdmin','middleware' => 'isAdmin'], function () {
     Route::get('/stu-works/manager-filter','Admin\stuWorksController@mfclass');
     Route::post('/stu-works/manager-filter','Admin\stuWorksController@mfclassadd');
     Route::get('/stu-works/manager-filter/{id}','Admin\stuWorksController@mfclassdel');
+    Route::post('/stu-works/manager-filter/change-index-img','Admin\stuWorksController@mfclassimg');
     Route::get('/stu-works/show-class','Admin\stuWorksController@showClass');
     Route::get('/stu-works/show-class/{id}','Admin\stuWorksController@showThatClass');
     Route::post('/stu-works/show-class/del','Admin\stuWorksController@delworks');

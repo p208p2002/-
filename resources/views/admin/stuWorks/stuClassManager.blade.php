@@ -10,13 +10,17 @@
 @section('main')
 <h3>管理分類</h3>
 <small class="text-muted">新稱或刪除分類</small><br><br>
+<small class="text-muted">*刪除分類前必須清空該分類</small><br>
+<small class="text-muted">*封面圖片格式限制.jpg/.jpeg</small><br>
+<br>
 <div class="row">
-    <div class="col-8">
+    <div class="col-12">
         <table class="table">
             <thead>
                 <tr class="table-active">
                 <th>分類</th>
                 <th>名稱</th>
+                <th>封面</th>
                 <th>操作</th>
                 </tr>
             </thead>
@@ -27,7 +31,15 @@
                     <tr>
                     <td>{{ $data->schoolid }}</td>
                     <td>{{ $data->className }}</td>
-                    <td><a class="btn btn-danger" href={{ url('./webAdmin/stu-works/manager-filter')."/".$data->id }} role="button-danger">－</a></td>
+                    <td>
+                        <form action={{ url('/webAdmin/stu-works/manager-filter/change-index-img') }} method="post" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="classid" value={{ $data->id }}>
+                            <input type="file" name="img">
+                            <button type="submit">變更封面</button>
+                        </form>
+                    </td>
+                    <td><a class="btn btn-danger" href={{ url('./webAdmin/stu-works/manager-filter')."/".$data->id }} role="button-danger">刪除分類</a></td>
                     </tr>
                 @endforeach
                 
@@ -44,14 +56,11 @@
                         </select>
                     </td>
                     <td><input type="text" name="className" class="form-control" placeholder="新增分類..."></td>
-                    <td><button type="submit" class="btn btn-success">＋</button></td>
+                    <td><button type="submit" class="btn btn-success">新增分類</button></td>
                 </tr>
-                
-                
                 </from>
             </tbody>
         </table>   
-        <small class="text-muted">*刪除分類前必須清空該分類</small><br><br>
     </div>
 </div>
 @endsection

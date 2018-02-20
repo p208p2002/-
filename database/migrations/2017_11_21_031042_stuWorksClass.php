@@ -17,6 +17,7 @@ class StuWorksClass extends Migration
             $table->increments('id');
             $table->integer('schoolid');
             $table->string('className');
+            $table->string('imgpath', 300);
         });
     }
 
