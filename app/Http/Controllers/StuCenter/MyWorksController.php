@@ -36,8 +36,7 @@ class MyWorksController extends Controller
     }
 
     public function showManagement(){
-        $uid = Auth::user()->id;
-        // dd($uName);
+        $uid = Auth::user()->id;        
         $datas = DB::SELECT('
             SELECT stuworks.id,stuworks.context,stuworksclass.className,school.name,stuworks.filepath
             FROM  stuworks, stuworksclass, school
@@ -45,8 +44,18 @@ class MyWorksController extends Controller
                 stuworks.classid = stuworksclass.id 
                 AND stuworks.schoolid = school.id
                 AND stuworks.uid ="' .$uid.'"'
-        );
-        // dd($datas);
+        );        
         return view('stuCenter.myWorks.managmentUpload',['datas'=>$datas]);
+    }
+
+    public function delFile($fileid){
+        $uid = Auth::user()->id;
+        DB::table('stuworks')
+            ->where([
+                ['id','=',$fileid],
+                ['uid','=',$uid]
+            ])
+            ->delete();
+        return back();
     }
 }
