@@ -38,15 +38,15 @@ class MyWorksController extends Controller
     public function showManagement(){
         $uid = Auth::user()->id;
         // dd($uName);
-        $data = DB::SELECT('
-            SELECT stuworks.id,stuworks.context,stuworksclass.className,school.name
+        $datas = DB::SELECT('
+            SELECT stuworks.id,stuworks.context,stuworksclass.className,school.name,stuworks.filepath
             FROM  stuworks, stuworksclass, school
             WHERE 
                 stuworks.classid = stuworksclass.id 
                 AND stuworks.schoolid = school.id
                 AND stuworks.uid ="' .$uid.'"'
         );
-        dd($data);
-        return view('stuCenter.myWorks.managmentUpload');
+        // dd($datas);
+        return view('stuCenter.myWorks.managmentUpload',['datas'=>$datas]);
     }
 }
