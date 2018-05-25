@@ -16,11 +16,13 @@ class Stuworks extends Migration
         Schema::create('stuworks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('classid');
+            $table->integer('uid');
             $table->integer('schoolid');
             $table->string('filepath');
             $table->string('context');
             $table->string('studentname');
             $table->timestamp('createtime');
+
         });
     }
 

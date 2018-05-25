@@ -177,6 +177,7 @@ Route::group(['prefix' => 'student-center','middleware' => 'isMember'], function
     //
     Route::get('/my-works','StuCenter\MyWorksController@index');
     Route::get('/my-works/upload','StuCenter\MyWorksController@create');
+    Route::get('/my-works/mengment','StuCenter\MyWorksController@showManagement');
     Route::post('/my-works/upload','Admin\stuWorksController@store');
 });
 

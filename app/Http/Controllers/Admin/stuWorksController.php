@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Services\ImageService;
@@ -51,6 +52,7 @@ class stuWorksController extends Controller
     public function store(Request $request)
     {
         //
+        $uid = Auth::user()->id;
         $stunames=$request->stunames;
         $worknames=$request->worknames;
         $files=$request->userfile;
@@ -82,7 +84,8 @@ class stuWorksController extends Controller
                     'context' => $worknames[$count],
                     'filepath' => 'pdf/'.$uniquename,
                     'classid' => $classid,
-                    'schoolid' => $schoolid
+                    'schoolid' => $schoolid,
+                    'uid' => $uid
                 ]);
 
             }

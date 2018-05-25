@@ -1,9 +1,9 @@
 <h3><a href={{ url('/student-center') }} >後台首頁</a></h3><br>
 <h3>一般操作</h3>
-<div class="list-group">
-  {{--  <a id="block1-menuItem1" href={{ url('/webAdmin/newNews') }} class="list-group-item list-group-item-action">最新消息</a>  --}}
-  {{--  <a id="block1-menuItem2" href={{ url('/webAdmin/goodArticle') }} class="list-group-item list-group-item-action">好文閱讀</a>  --}}
+<div class="list-group">  
   <a id="block1-menuItem1" href={{ url('/student-center/my-works') }} class="list-group-item list-group-item-action">上傳作品</a>
+  <a id="block1-menuItem1" href={{ url('/student-center/my-works/mengment') }} class="list-group-item list-group-item-action">管理上傳作品</a>
+  
  
 </div><br>
 
