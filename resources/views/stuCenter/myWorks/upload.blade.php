@@ -6,6 +6,9 @@
     <p>歡迎使用學生中心</p>
     <h3>學生成果展示</h3>
 <hr>
+
+<br>
+<h5>選擇分類</h5>
 @if (Session::has('isupload')) 
     <div class="alert alert-success" role="alert">File upload success!</div>
 @endif
@@ -52,9 +55,12 @@
 </div>
 
 
-<br>  
+<br>
+<br>
   <button value="upload" type="submit" class="btn btn-primary">上傳檔案</button>
+  <small><b>上傳前請確定已選擇正確的分類</b></small><br>
 </form>
+
 
 <hr class="d-block d-md-none">
 
