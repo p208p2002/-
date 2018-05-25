@@ -11,6 +11,10 @@
 var url = {!! json_encode($file) !!};
 </script>
 
+<a href={{ $file }} class="btn btn-primary" download="file">Download</a>
+<br>
+<br>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.9.600/pdf.js"></script>
 <script type="text/javascript">
 function renderPDF(url, canvasContainer, options) {
