@@ -3,7 +3,7 @@
 @section('container')
 <div class="row">
 @foreach($datas as $data)
-    <div class="col-lg-4 col-12">
+    <div class="col-lg-4 col-12" style="margin-bottom:20px">
         <div class="card" style="width: 20rem;">
         <a href={{ url('/classicBookShare').'/'.$data->id}}>
             <div class="img-responsive">
