@@ -11,9 +11,9 @@
             <div class="card-body">
             <div class="img-responsive">
               @if($data->imgpath!="")
-              <img src={{ url($data->imgpath) }} alt="" srcset="" class="card-img-top">
+              <img src={{ url($data->imgpath) }} alt="" srcset="" class="card-img-top" style="height:350px;">
               @else
-              <img src="https://image.flaticon.com/icons/png/512/554/554826.png" alt="" srcset="" class="card-img-top">
+              <img src="https://image.flaticon.com/icons/png/512/554/554826.png" alt="" srcset="" class="card-img-top" style="height:350px;">
               @endif
             </div>
               <p class="card-text text-center">{{ $data->className }}</p>
