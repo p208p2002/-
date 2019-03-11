@@ -3,7 +3,7 @@
 @section('container')
 <div class="row">
 @foreach($datas as $data)
-    <div class="col-4">
+    <div class="col-lg-4 col-12">
         <div class="card" style="width: 20rem;">
         <a href={{ url('/classicBookShare').'/'.$data->id}}>
             <img class="card-img-top" src={{ url('/').$data->filepath }} alt="Card image cap">
@@ -17,5 +17,5 @@
 </div>
 
 {!! $datas->render() !!}
-  
+
 @endsection
