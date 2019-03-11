@@ -27,29 +27,29 @@
 	<!-- start: Slider -->
 	<div class="slider-wrapper">
 
-		<div id="da-slider" class="da-slider">
+		<div id="da-slider" class="da-slider d-none d-md-block">
 			<div class="da-slide">
 				<h2>Listen</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Listen more</a>
+				{{-- <p>Listen more</p> --}}
+				{{-- <a href="#" class="da-link">Listen more</a> --}}
 				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/136/136223.svg" width="180" alt="image01" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>Read</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Read more</a>
+				{{-- <p>Read more</p> --}}
+				{{-- <a href="#" class="da-link">Read more</a> --}}
 				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/234/234616.svg" width="180" alt="image02" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>Speak</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Talk more</a>
+				{{-- <p>Speak more</p> --}}
+				{{-- <a href="#" class="da-link">Talk more</a> --}}
 				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/547/547049.svg" width="180" alt="image03" /></div>
 			</div>
 			<div class="da-slide">
 				<h2>Write</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-				<a href="#" class="da-link">Write more</a>
+				{{-- <p>Write more</p> --}}
+				{{-- <a href="#" class="da-link">Write more</a> --}}
 				<div class="da-img"><img src="https://image.flaticon.com/icons/svg/164/164962.svg" width="180" alt="image04" /></div>
 			</div>
 			<nav class="da-arrows">
