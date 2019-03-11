@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {{--  wholelanguagewriting  --}}
 <html lang="en">
-<head> 
+<head>
 @include('website.layouts.headContext')
 <title>聽讀說寫:全面進擊-Engilsh Learning</title>
 <style>
@@ -22,7 +22,7 @@
 	@include('website.layouts.nav')
 
 	<!--  -->
-		  
+
 	<!--  -->
 	<!-- start: Slider -->
 	<div class="slider-wrapper">
@@ -77,14 +77,14 @@
 					<tr>
 						<th style="width: 5%"></th>
 						<th style="width: 10%">#</th>
-						<th style="width: 10%">分類</th>		
+						<th style="width: 10%">分類</th>
 						<th style="width: 50%" class="text-center">標題</th>
 						<th style="width: 20%">發佈時間</th>
 						<th style="width: 5%"></th>
 					</tr>
 				</thead>
 				<tbody>
-				
+
 				@foreach($datas as $data)
 				<tr>
 					<td></td>
@@ -126,7 +126,7 @@
 					</div>
 					</div>
 			</div>
-			
+
 			<div class="col">
 				<div class="card border-0">
 				<div class="card-body">
@@ -136,7 +136,7 @@
 					</a>
 					<br><br>
 					<div class="title"><a style="color:black;" href={{ url('/courseMainPoint') }}><h3>Syllabus</h3></a></div>
-					</div>					
+					</div>
 					<p class="card-text text-secondary text-center">課程大綱</p>
 				</div>
 				</div>
@@ -264,9 +264,9 @@
 				<!-- end: Row -->
 
 			<hr>
-			
+
 			<div class="row">
-				<div class="col">
+				<div class="col-md-6 col-12">
 				<div class="icons-box-vert">
 				<img src="https://image.flaticon.com/icons/svg/204/204286.svg" width="70" alt="..." class="rounded" alt="" srcset="">
 				<div class="icons-box-vert-info">
@@ -280,7 +280,7 @@
 				<div class="clear"></div>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col-md-6 col-12">
 				<div class="icons-box-vert">
 				<img src="https://image.flaticon.com/icons/svg/236/236816.svg" width="70" alt="..." class="rounded" alt="" srcset="">
 				<div class="icons-box-vert-info">
