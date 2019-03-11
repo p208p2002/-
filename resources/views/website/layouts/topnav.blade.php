@@ -3,7 +3,7 @@
 	@if(!Auth::check())
 	<div class="navbar-toggler">
 			<a href={{ url('./register') }}>註冊</a>
-			<a href={{ url('./login') }}>登入</a>	
+			<a href={{ url('./login') }}>登入</a>
 	</div>
 	@endif
 
@@ -17,15 +17,15 @@
 		<option value={{ url('./student-center') }}>學生中心</option>
 		@endif
 		<option value="#">------</option>
-	@endif		
+	@endif
 
 	<option value={{ url('/') }}>回首頁</option>
 	</select>
-    
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href={{ url('./calendar') }} >教學目標 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./curse-objectives') }} >教學目標 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
             <a class="nav-link" href={{ url('./courseMainPoint')}} >課程大綱 <span class="sr-only">(current)</span></a>
@@ -40,7 +40,7 @@
             <a class="nav-link" href={{ url('./goodArticle')}}>好文閱讀 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
-            <a class="nav-link" href="#">學生成果展示 <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href={{ url('./stu-performance') }}>學生成果展示 <span class="sr-only">(current)</span></a>
         </li>
 		<li class="nav-item">
             <a class="nav-link" href={{ url('./videoTrip')}}>影音之旅 <span class="sr-only">(current)</span></a>
@@ -51,10 +51,10 @@
 		<li class="nav-item">
             <a class="nav-link" href={{ url('./calendar')}}>行事曆 <span class="sr-only">(current)</span></a>
         </li>
-            
+
 
 		</ul>
-		<div class="span">	
+		<div class="span">
 			<div id="footer-menu-links">
 				<ul id="footer-nav">
 				@if(!Auth::check())
@@ -70,11 +70,10 @@
 					@else
 					<li><a href={{ url('./student-center') }}>學生中心</a></li>
 					@endif
-				@endif					
+				@endif
 				</ul>
 			</div>
 		</div>
     </div>
 </nav>
 <br><br><br>
-	
