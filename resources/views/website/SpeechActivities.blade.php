@@ -4,7 +4,7 @@
 <div class="row">
 @foreach($datas as $key=>$data)
     <div class="col-lg-4 col-12">
-        <div class="card" style="width: 20rem;margin-bottom:20px;">
+        <div class="card" style="margin-bottom:20px;">
             @if($data->imgfile!="empty")
             <img class="card-img-top" src={{ url('/').$data->imgfile }} alt="Card image cap">
             @else
