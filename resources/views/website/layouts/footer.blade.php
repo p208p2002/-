@@ -53,7 +53,7 @@
 
 	</div>
 	<hr>
-	<p class="text-center">Enligsh-learn-web 2017&nbsp;</p>
+	<p class="text-center">本課程由教育部資訊及科技教育司支持</p>
 </div>
 
 
